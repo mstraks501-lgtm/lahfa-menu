@@ -43,39 +43,40 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  /* LAHFA Warm Elegance Color Palette */
+  --primary: #C17A5C; /* Warm Terracotta */
+  --primary-foreground: #F9F7F4; /* Cream */
+  --sidebar-primary: #C17A5C;
+  --sidebar-primary-foreground: #F9F7F4;
+  --chart-1: #D4A574;
+  --chart-2: #C17A5C;
+  --chart-3: #A0633F;
+  --chart-4: #7A4A2E;
+  --chart-5: #5C3A1F;
+  --radius: 0.75rem;
+  --background: #F9F7F4; /* Cream */
+  --foreground: #1A1A1A; /* Charcoal */
+  --card: #FFFFFF;
+  --card-foreground: #1A1A1A;
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1A1A;
+  --secondary: #E8DFD5; /* Soft Taupe */
+  --secondary-foreground: #2C3E50; /* Deep Slate */
+  --muted: #E8DFD5;
+  --muted-foreground: #7A7A7A;
+  --accent: #D4A574; /* Soft Gold */
+  --accent-foreground: #1A1A1A;
+  --destructive: #DC2626;
+  --destructive-foreground: #F9F7F4;
+  --border: #E8DFD5;
+  --input: #FFFFFF;
+  --ring: #C17A5C;
+  --sidebar: #F9F7F4;
+  --sidebar-foreground: #1A1A1A;
+  --sidebar-accent: #C17A5C;
+  --sidebar-accent-foreground: #F9F7F4;
+  --sidebar-border: #E8DFD5;
+  --sidebar-ring: #C17A5C;
 }
 
 .dark {
@@ -119,6 +120,20 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Lato', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+  }
+  h1 {
+    @apply text-5xl md:text-6xl font-bold;
+  }
+  h2 {
+    @apply text-4xl md:text-5xl font-semibold;
+  }
+  h3 {
+    @apply text-2xl md:text-3xl font-semibold;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -134,6 +149,29 @@
 }
 
 @layer components {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+  }
+
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
   /**
    * Custom container utility that centers content and adds responsive padding.
    *
