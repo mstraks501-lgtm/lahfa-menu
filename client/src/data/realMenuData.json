@@ -1,0 +1,1369 @@
+{
+  "categories": [
+    {
+      "id": "16",
+      "name_tr": "SOĞUK KAHVELER",
+      "name_en": "ICED COFFEES",
+      "name_ar": "القهوة الباردة",
+      "image": "https://qrapi.toyayazilim.com/images/12b508f5-01fe-4cbb-a2b0-49909d0ddaca.jpg"
+    },
+    {
+      "id": "19",
+      "name_tr": "KAHVELER",
+      "name_en": "COFFEES",
+      "name_ar": "القهوة",
+      "image": "https://qrapi.toyayazilim.com/images/e9c77570-71bf-4a9d-99d7-fe724253d746.jpg"
+    },
+    {
+      "id": "20",
+      "name_tr": "İÇECEKLER",
+      "name_en": "DRİNKS",
+      "name_ar": "DRİNKS",
+      "image": null
+    },
+    {
+      "id": "21",
+      "name_tr": "ÇAYLAR / TEAS",
+      "name_en": "ÇAYLAR / TEAS",
+      "name_ar": "ÇAYLAR / TEAS",
+      "image": null
+    },
+    {
+      "id": "22",
+      "name_tr": "YEŞİL ÇAYLAR",
+      "name_en": "GREEN TEAS",
+      "name_ar": "الشاي الأخضر",
+      "image": "https://qrapi.toyayazilim.com/images/40eb5cff-d7a6-4bbc-9c4e-ca5afac78658.jpg"
+    },
+    {
+      "id": "3",
+      "name_tr": "KAHVALTI",
+      "name_en": "BREAKFAST",
+      "name_ar": "الإفطار",
+      "image": "https://qrapi.toyayazilim.com/images/b936e384-b53e-4711-85ce-ba2967ae799c.jpg"
+    },
+    {
+      "id": "25",
+      "name_tr": "BİTKİ ÇAYLARI",
+      "name_en": "HERBAL TEAS",
+      "name_ar": "شاي الأعشاب",
+      "image": "https://qrapi.toyayazilim.com/images/28ef5a7f-df64-4637-82b7-a3294c3424fc.jpg"
+    },
+    {
+      "id": "5",
+      "name_tr": "ANA YEMEKLER",
+      "name_en": "ANA YEMEKLER",
+      "name_ar": "ANA YEMEKLER",
+      "image": "https://qrapi.toyayazilim.com/images/b6b24dc6-ad9a-42c4-90b7-f851932c08f5.jpg"
+    },
+    {
+      "id": "26",
+      "name_tr": "MEYVE ÇAYLARI",
+      "name_en": "FRUIT TEAS",
+      "name_ar": "شاي الفواكه",
+      "image": "https://qrapi.toyayazilim.com/images/522f0bd2-c483-401b-b712-d47f4b079c99.jpg"
+    },
+    {
+      "id": "6",
+      "name_tr": "ÇORBALAR",
+      "name_en": "SOUPS",
+      "name_ar": "الحساء",
+      "image": "https://qrapi.toyayazilim.com/images/76dc9322-66cd-43b7-9204-a4753af162ed.jpg"
+    },
+    {
+      "id": "27",
+      "name_tr": "KIŞ İÇECEKLERİ",
+      "name_en": "WINTER BEVERAGES",
+      "name_ar": "المشروبات الشتوية",
+      "image": "https://qrapi.toyayazilim.com/images/d667b3d5-4e99-4187-8c58-0b0cbc40eb26.jpg"
+    },
+    {
+      "id": "7",
+      "name_tr": "SALATALAR",
+      "name_en": "SALADS",
+      "name_ar": "السلطات",
+      "image": "https://qrapi.toyayazilim.com/images/6daf3d40-5274-4c9c-ba24-d15f1737a6f0.jpg"
+    },
+    {
+      "id": "28",
+      "name_tr": "DENİZ ÜRÜNLERİ",
+      "name_en": "SEA FOOD",
+      "name_ar": "المأكولات البحرية",
+      "image": null
+    },
+    {
+      "id": "8",
+      "name_tr": "APERATİFLER",
+      "name_en": "APPETİZERS",
+      "name_ar": "APPETİZERS",
+      "image": "https://qrapi.toyayazilim.com/images/8535bb1b-d757-47ab-8a6e-bd5598a14257.jpg"
+    },
+    {
+      "id": "29",
+      "name_tr": "TAVUKLU KABSALAR",
+      "name_en": "CHİCKEN RİCE",
+      "name_ar": "CHİCKEN RİCE",
+      "image": null
+    },
+    {
+      "id": "9",
+      "name_tr": "ARAP YÖRESEL YEMEKLERİ",
+      "name_en": "TRADİTİONAL DİSHES",
+      "name_ar": "TRADİTİONAL DİSHES",
+      "image": "https://qrapi.toyayazilim.com/images/f52d53ec-6829-447f-937f-16608e8a0a14.jpg"
+    },
+    {
+      "id": "30",
+      "name_tr": "ETLİ KABSALAR",
+      "name_en": "MEAT RİCE",
+      "name_ar": "MEAT RİCE",
+      "image": null
+    },
+    {
+      "id": "10",
+      "name_tr": "MAKARNA",
+      "name_en": "PASTAS",
+      "name_ar": "المعكرونة",
+      "image": "https://qrapi.toyayazilim.com/images/a0737bc1-aa28-4cd9-a0a0-3574690ceddb.jpg"
+    },
+    {
+      "id": "31",
+      "name_tr": "EKMEK & PİLAV",
+      "name_en": "BREAD & RİCE",
+      "name_ar": "BREAD & RİCE",
+      "image": null
+    },
+    {
+      "id": "11",
+      "name_tr": "TACO ÇEŞİTLERİ",
+      "name_en": "TACOS",
+      "name_ar": "التاكو",
+      "image": "https://qrapi.toyayazilim.com/images/1a2f0373-25ba-48f8-b19e-10afb234011b.jpg"
+    },
+    {
+      "id": "32",
+      "name_tr": "KIZARTMALAR",
+      "name_en": "FRİED İTEMS",
+      "name_ar": "FRİED İTEMS",
+      "image": null
+    },
+    {
+      "id": "12",
+      "name_tr": "ÇITIR TAVUK",
+      "name_en": "FRİED CHİCKEN",
+      "name_ar": "FRİED CHİCKEN",
+      "image": "https://qrapi.toyayazilim.com/images/e6c61cf4-411b-4a78-9e6f-7f412a8cf880.jpg"
+    },
+    {
+      "id": "33",
+      "name_tr": "FIRIN ÜRÜNLERİ",
+      "name_en": "BAKERY İTEMS",
+      "name_ar": "BAKERY İTEMS",
+      "image": null
+    },
+    {
+      "id": "13",
+      "name_tr": "TATLILAR",
+      "name_en": "DESSERTS",
+      "name_ar": "الحلويات",
+      "image": "https://qrapi.toyayazilim.com/images/6db573ef-90da-4738-917b-0203c0ea3d43.jpg"
+    },
+    {
+      "id": "34",
+      "name_tr": "HİNT YEMEKLERİ",
+      "name_en": "İNDİAN DİSHES",
+      "name_ar": "İNDİAN DİSHES",
+      "image": null
+    },
+    {
+      "id": "15",
+      "name_tr": "SOĞUK İÇECEKLER",
+      "name_en": "COLD DRINKS",
+      "name_ar": "المشروبات الباردة",
+      "image": "https://qrapi.toyayazilim.com/images/1275972a-7048-4235-96b8-bd3cd173ed7d.jpg"
+    },
+    {
+      "id": "35",
+      "name_tr": "NARGİLE",
+      "name_en": "HOOKAH",
+      "name_ar": "الشيشة",
+      "image": "https://qrapi.toyayazilim.com/images/8c55b890-ec71-4926-8d3a-77b021572ce3.jpg"
+    }
+  ],
+  "products": {
+    "3": [
+      {
+        "id": 1,
+        "name": "LAHFA KAHVALTI",
+        "description": "BAKLA/ NOHUT/ FINDIK EZMESİ , MELEMEN , OMLET, PEYNİR TABAĞI, YEŞİLLİK, ZEYTİN, BAL, REÇEL, PANKEK, PATATES, BÖREK, KAYMAK, ÇAY VEYA KARAK",
+        "price": 1800.0,
+        "image": "https://qrapi.toyayazilim.com/images/e398f5e4-3d6a-48da-921a-03d16cee26fe.jpg"
+      },
+      {
+        "id": 87,
+        "name": "RAJU BREAKFAST",
+        "description": null,
+        "price": 950.0,
+        "image": "https://qrapi.toyayazilim.com/images/dc6ac437-e2fd-451d-b1e2-e7e42c1dc192.jpg"
+      },
+      {
+        "id": 10124,
+        "name": "OMLET",
+        "description": null,
+        "price": 100.0,
+        "image": "https://qrapi.toyayazilim.com/images/ad9a6c87-8bec-4c5e-a438-24ac9dfaaa1f.jpg"
+      },
+      {
+        "id": 10131,
+        "name": "KAHVALTI TABAĞI",
+        "description": "1 KİŞİLİK ZEYTİN,KAYMAK,BAL,REÇEL,PANKEK,PEYNİR,SEBZE,BAKLA VEYA NOHUT,1 TANE HAŞLANMIŞ VEYA OMLET,YAĞ VE ZATER,KIZARMIŞ PATATES,MİNİ PEYNİRLİ PİDE,2 ADET KALEM BÖREĞİ,ÇAY",
+        "price": 900.0,
+        "image": "https://qrapi.toyayazilim.com/images/b50b43ef-a234-4cd6-ac25-d8b4e3ef8b81.jpg"
+      }
+    ],
+    "25": [
+      {
+        "id": 10150,
+        "name": "KIŞ ÇAYI",
+        "description": null,
+        "price": 150.0,
+        "image": null
+      },
+      {
+        "id": 20170,
+        "name": "HİBİSCUS ÇAYI (KARKADİ)",
+        "description": null,
+        "price": 150.0,
+        "image": null
+      },
+      {
+        "id": 20171,
+        "name": "BİTKİ ÇAYI",
+        "description": null,
+        "price": 150.0,
+        "image": "https://qrapi.toyayazilim.com/images/dedb8971-5340-4500-8aa3-59e1f084fb66.jpg"
+      },
+      {
+        "id": 20173,
+        "name": "IHLAMUR ÇAYI",
+        "description": null,
+        "price": 150.0,
+        "image": "https://qrapi.toyayazilim.com/images/36a4fe11-4459-4ef9-ad74-cc739575331b.jpg"
+      },
+      {
+        "id": 20174,
+        "name": "PAPATYA ÇAYI",
+        "description": null,
+        "price": 150.0,
+        "image": null
+      }
+    ],
+    "5": [
+      {
+        "id": 99,
+        "name": "ETLİ MUKALKAL",
+        "description": null,
+        "price": 1500.0,
+        "image": "https://qrapi.toyayazilim.com/images/2ba97095-9006-472f-a6d4-42fbe8f604bc.jpg"
+      },
+      {
+        "id": 100,
+        "name": "ETLİ BAMYA",
+        "description": "YANINDA PİLAV TABAĞI",
+        "price": 1500.0,
+        "image": "https://qrapi.toyayazilim.com/images/edee9095-2782-4f05-8d58-6e6fe0303ad9.jpg"
+      },
+      {
+        "id": 101,
+        "name": "KUBBE LEBENİYE",
+        "description": "YANINDA PİLAV TABAĞI",
+        "price": 1500.0,
+        "image": "https://qrapi.toyayazilim.com/images/f2d9505a-6488-4c08-b50a-141d970a04a7.jpg"
+      },
+      {
+        "id": 102,
+        "name": "MUSSAKKA",
+        "description": null,
+        "price": 1500.0,
+        "image": "https://qrapi.toyayazilim.com/images/62670c49-7d18-4f70-81d1-a2077292fabe.jpg"
+      },
+      {
+        "id": 103,
+        "name": "KİBDAE",
+        "description": null,
+        "price": 1500.0,
+        "image": "https://qrapi.toyayazilim.com/images/31c0cdd0-6e9d-49a7-890b-390f632b0c52.jpg"
+      },
+      {
+        "id": 10125,
+        "name": "BUTTER CHICKEN",
+        "description": "TEREYAĞLİ TAVUK,PİLAV TABAĞI",
+        "price": 1400.0,
+        "image": "https://qrapi.toyayazilim.com/images/7d86dfeb-f3fe-422d-9b4b-cb5ad7a5db69.jpg"
+      },
+      {
+        "id": 10128,
+        "name": "BAMYA ETSIZ",
+        "description": null,
+        "price": 500.0,
+        "image": "https://qrapi.toyayazilim.com/images/bdda2bc3-a923-4182-ac02-7d4bb8da9bf0.jpg"
+      }
+    ],
+    "26": [
+      {
+        "id": 20176,
+        "name": "BERRY PUNCH",
+        "description": null,
+        "price": 150.0,
+        "image": null
+      },
+      {
+        "id": 20177,
+        "name": "RED FOREST",
+        "description": null,
+        "price": 150.0,
+        "image": null
+      }
+    ],
+    "6": [
+      {
+        "id": 6,
+        "name": "MERCİMEK ÇORBASI",
+        "description": null,
+        "price": 200.0,
+        "image": "https://qrapi.toyayazilim.com/images/f6c2a45b-640a-496d-b512-a86f2d8fbe70.jpg"
+      },
+      {
+        "id": 7,
+        "name": "FREEKEH ÇORBASI",
+        "description": null,
+        "price": 250.0,
+        "image": "https://qrapi.toyayazilim.com/images/bfa91cae-be08-492d-8503-cdde592d96bc.jpg"
+      },
+      {
+        "id": 119,
+        "name": "CHICKEN SWEET CORN",
+        "description": null,
+        "price": 175.0,
+        "image": "https://qrapi.toyayazilim.com/images/0a0f0f1f-13d6-49ed-8833-8f137fb2a91b.jpg"
+      },
+      {
+        "id": 10137,
+        "name": "MANTAR ÇORBASI",
+        "description": null,
+        "price": 250.0,
+        "image": "https://qrapi.toyayazilim.com/images/4560fa3f-f368-4477-904d-01eea8c5697d.jpg"
+      },
+      {
+        "id": 10138,
+        "name": "HOT AND SOUR CHICKEN",
+        "description": null,
+        "price": 200.0,
+        "image": "https://qrapi.toyayazilim.com/images/ae720681-c4ab-496a-87a7-f0f9dbda60e8.jpg"
+      }
+    ],
+    "27": [
+      {
+        "id": 56,
+        "name": "SICAK ÇIKOLATA",
+        "description": null,
+        "price": 220.0,
+        "image": "https://qrapi.toyayazilim.com/images/87057371-b489-40b2-afd6-cbdaafe79662.jpg"
+      },
+      {
+        "id": 61,
+        "name": "SALEP",
+        "description": null,
+        "price": 150.0,
+        "image": "https://qrapi.toyayazilim.com/images/99524c98-75dd-4fec-9b71-37885b6b341e.jpg"
+      }
+    ],
+    "7": [
+      {
+        "id": 8,
+        "name": "LAHFA SALATASI",
+        "description": null,
+        "price": 500.0,
+        "image": "https://qrapi.toyayazilim.com/images/5e60a1f5-6081-4bce-b0ca-ef8441dc3e7d.jpg"
+      },
+      {
+        "id": 9,
+        "name": "SEZAR SALATA",
+        "description": null,
+        "price": 500.0,
+        "image": "https://qrapi.toyayazilim.com/images/7e9fb74a-4ef3-443b-9a27-b425da3a0e7a.jpg"
+      },
+      {
+        "id": 10,
+        "name": "ROKA SALATASI",
+        "description": null,
+        "price": 400.0,
+        "image": "https://qrapi.toyayazilim.com/images/39fa6011-9bc9-4da2-a480-d23ecffde3ab.jpg"
+      },
+      {
+        "id": 11,
+        "name": "PANCAR SALATASI",
+        "description": null,
+        "price": 400.0,
+        "image": "https://qrapi.toyayazilim.com/images/6ef11b43-2c29-4098-9567-ef6ec1718669.jpg"
+      },
+      {
+        "id": 12,
+        "name": "PATLICAN FETTESİ",
+        "description": null,
+        "price": 500.0,
+        "image": "https://qrapi.toyayazilim.com/images/9139127a-d856-49e2-9fc2-66a38ce0aed0.jpg"
+      },
+      {
+        "id": 10134,
+        "name": "YÜNANİSTAN SALATASI",
+        "description": null,
+        "price": 500.0,
+        "image": "https://qrapi.toyayazilim.com/images/f4d456d5-627d-4c3d-94c5-435dd9dfe3c1.jpg"
+      },
+      {
+        "id": 10135,
+        "name": "RUBİAN SALATASI",
+        "description": null,
+        "price": 500.0,
+        "image": "https://qrapi.toyayazilim.com/images/fee0521a-83d9-423f-9ed3-53159af1b519.jpg"
+      }
+    ],
+    "28": [
+      {
+        "id": 16,
+        "name": "MRUBİAN",
+        "description": null,
+        "price": 1400.0,
+        "image": "https://qrapi.toyayazilim.com/images/fb41c86d-94de-46cb-8230-b6afdf132001.jpg"
+      },
+      {
+        "id": 10126,
+        "name": "MAMUŞ RUBİAN",
+        "description": null,
+        "price": 1400.0,
+        "image": "https://qrapi.toyayazilim.com/images/7775cdfe-e8c2-4bfe-aa71-387dc98d0db8.jpg"
+      },
+      {
+        "id": 10144,
+        "name": "PRAWNS MASALA",
+        "description": null,
+        "price": 700.0,
+        "image": "https://qrapi.toyayazilim.com/images/b9512c38-bb60-4108-9a7c-0c08012fe285.jpg"
+      },
+      {
+        "id": 20178,
+        "name": "KARİDES",
+        "description": null,
+        "price": 1300.0,
+        "image": null
+      }
+    ],
+    "8": [
+      {
+        "id": 43,
+        "name": "SARMA 6xADET",
+        "description": null,
+        "price": 200.0,
+        "image": "https://qrapi.toyayazilim.com/images/cf746cef-420d-4ffe-9937-fcd3e1ffac08.jpg"
+      },
+      {
+        "id": 10122,
+        "name": "MTABBEL KÜÇÜK",
+        "description": null,
+        "price": 75.0,
+        "image": "https://qrapi.toyayazilim.com/images/6b0dcb68-537b-4f70-b35e-5b0b7e381854.jpg"
+      },
+      {
+        "id": 10123,
+        "name": "MTABBEL BÜYÜK",
+        "description": null,
+        "price": 110.0,
+        "image": "https://qrapi.toyayazilim.com/images/823d567b-2a45-4abe-aac5-a370da5c674d.jpg"
+      },
+      {
+        "id": 10136,
+        "name": "HUMUS",
+        "description": null,
+        "price": 110.0,
+        "image": "https://qrapi.toyayazilim.com/images/5e9f40b8-14c8-49ff-8d87-9008966217dc.jpg"
+      },
+      {
+        "id": 20165,
+        "name": "YOĞURT",
+        "description": null,
+        "price": 60.0,
+        "image": "https://qrapi.toyayazilim.com/images/9b1f1010-ef55-4edc-afbe-b9877277c76f.jpg"
+      }
+    ],
+    "29": [
+      {
+        "id": 90,
+        "name": "CHICKEN KABSA",
+        "description": null,
+        "price": 1400.0,
+        "image": "https://qrapi.toyayazilim.com/images/2431d325-a651-4682-8a67-b801caccebba.jpg"
+      },
+      {
+        "id": 92,
+        "name": "CHICKEN MENDI",
+        "description": null,
+        "price": 1400.0,
+        "image": "https://qrapi.toyayazilim.com/images/a469a854-738f-4ee7-9b53-abcf99be491d.jpg"
+      },
+      {
+        "id": 94,
+        "name": "CHICKEN BİRYANI",
+        "description": null,
+        "price": 1400.0,
+        "image": "https://qrapi.toyayazilim.com/images/94b94334-caeb-4e51-a529-8625cdede3bf.jpg"
+      },
+      {
+        "id": 96,
+        "name": "CHICKEN MAJBUS",
+        "description": null,
+        "price": 1400.0,
+        "image": "https://qrapi.toyayazilim.com/images/af635991-5753-41b7-9fbe-7397585c863e.jpg"
+      },
+      {
+        "id": 98,
+        "name": "TAVUKLU BUHARİ",
+        "description": null,
+        "price": 1400.0,
+        "image": "https://qrapi.toyayazilim.com/images/79b09f3e-a012-47b3-96f9-0cd8b5051de2.jpg"
+      },
+      {
+        "id": 105,
+        "name": "CHICKEN MADGOT",
+        "description": null,
+        "price": 1400.0,
+        "image": "https://qrapi.toyayazilim.com/images/8f4cb1a0-86f4-4f67-aa36-b6c23970a251.jpg"
+      }
+    ],
+    "9": [
+      {
+        "id": 23,
+        "name": "BALALİT",
+        "description": null,
+        "price": 300.0,
+        "image": "https://qrapi.toyayazilim.com/images/6d51aae1-5f5f-4b87-bdb7-34ee300d55c0.jpg"
+      },
+      {
+        "id": 24,
+        "name": "FINCAN",
+        "description": null,
+        "price": 500.0,
+        "image": "https://qrapi.toyayazilim.com/images/61b8f0a2-be3f-4df0-bd1b-d0a7077fec7e.jpg"
+      },
+      {
+        "id": 25,
+        "name": "CERİŞ",
+        "description": null,
+        "price": 300.0,
+        "image": "https://qrapi.toyayazilim.com/images/6c0028dd-f46f-4b3c-b10e-6f625a534dbf.jpg"
+      },
+      {
+        "id": 26,
+        "name": "HARİS",
+        "description": null,
+        "price": 300.0,
+        "image": "https://qrapi.toyayazilim.com/images/04da4ac9-3b7d-4efc-9ec6-496a364d1a4a.jpg"
+      }
+    ],
+    "30": [
+      {
+        "id": 89,
+        "name": "ETLİ KABSA",
+        "description": null,
+        "price": 1600.0,
+        "image": "https://qrapi.toyayazilim.com/images/17cf5a17-8ed2-4b7d-9cd3-2c4f4d59728a.jpg"
+      },
+      {
+        "id": 91,
+        "name": "ETLİ  MENDI",
+        "description": null,
+        "price": 1600.0,
+        "image": "https://qrapi.toyayazilim.com/images/cf0219ae-40f1-4454-84d9-03636c7ba288.jpg"
+      },
+      {
+        "id": 93,
+        "name": "ETLİ BİRYANİ",
+        "description": null,
+        "price": 1600.0,
+        "image": "https://qrapi.toyayazilim.com/images/5c6e5577-d503-4a1c-a3bb-7126cb70cc2a.jpg"
+      },
+      {
+        "id": 95,
+        "name": "ETLİ MAJBUS",
+        "description": null,
+        "price": 1600.0,
+        "image": "https://qrapi.toyayazilim.com/images/624d835d-57d2-41c7-bf93-058fec97afd4.jpg"
+      },
+      {
+        "id": 97,
+        "name": "ETLI BUHARI",
+        "description": null,
+        "price": 1600.0,
+        "image": "https://qrapi.toyayazilim.com/images/68f1243a-9585-4e82-aa13-65eb7b1f27ff.jpg"
+      },
+      {
+        "id": 104,
+        "name": "ETLİ MADGOT",
+        "description": null,
+        "price": 1600.0,
+        "image": "https://qrapi.toyayazilim.com/images/71d53e90-3045-486a-9a29-92ea29feca87.jpg"
+      }
+    ],
+    "10": [
+      {
+        "id": 27,
+        "name": "ALFREDO FETTUCCINE",
+        "description": null,
+        "price": 600.0,
+        "image": "https://qrapi.toyayazilim.com/images/49b9a21e-21c6-40fc-a3e3-1643f274534d.jpg"
+      },
+      {
+        "id": 28,
+        "name": "BOLONEZ SOSLU MAKARNA",
+        "description": null,
+        "price": 600.0,
+        "image": "https://qrapi.toyayazilim.com/images/bde56f88-8546-461f-90e6-8b61b1e1782a.jpg"
+      },
+      {
+        "id": 29,
+        "name": "İYİLERİN MAKARNASI",
+        "description": null,
+        "price": 600.0,
+        "image": "https://qrapi.toyayazilim.com/images/29262c00-0624-4575-8f2b-cf5bbe474df9.jpg"
+      },
+      {
+        "id": 30,
+        "name": "NOODLES",
+        "description": null,
+        "price": 250.0,
+        "image": "https://qrapi.toyayazilim.com/images/95e43200-2781-4b86-bd53-4eb22ec462dc.jpg"
+      },
+      {
+        "id": 10163,
+        "name": "İNDOMIE",
+        "description": null,
+        "price": 75.0,
+        "image": null
+      }
+    ],
+    "31": [
+      {
+        "id": 4,
+        "name": "PİLAV TABAĞI",
+        "description": null,
+        "price": 400.0,
+        "image": "https://qrapi.toyayazilim.com/images/a415ea42-ef8e-4bd5-aaaf-86c9effda8b0.jpg"
+      },
+      {
+        "id": 5,
+        "name": "ŞEHRİYELİ PİLAV",
+        "description": null,
+        "price": 400.0,
+        "image": "https://qrapi.toyayazilim.com/images/9394612a-f2a4-456b-8b30-02da2bd27b54.jpg"
+      },
+      {
+        "id": 112,
+        "name": "EKMEK",
+        "description": null,
+        "price": 50.0,
+        "image": "https://qrapi.toyayazilim.com/images/c5a57176-f80e-4aba-8e2c-81aa54c4545a.jpg"
+      },
+      {
+        "id": 10121,
+        "name": "ÇAPATI- 2 ADET",
+        "description": null,
+        "price": 75.0,
+        "image": "https://qrapi.toyayazilim.com/images/86244cf1-98b4-4aeb-9e78-977adb03132c.jpg"
+      }
+    ],
+    "11": [
+      {
+        "id": 18,
+        "name": "MEKSIKAN FATIRA",
+        "description": null,
+        "price": 110.0,
+        "image": "https://qrapi.toyayazilim.com/images/72686978-9d63-40fe-a3f8-fcd92628cd20.jpg"
+      },
+      {
+        "id": 31,
+        "name": "KIZARMIŞ TAVUK TACO",
+        "description": null,
+        "price": 500.0,
+        "image": "https://qrapi.toyayazilim.com/images/207d3f42-11da-4a20-afb4-00f9fff66f18.jpg"
+      },
+      {
+        "id": 32,
+        "name": "TAVUKLU KASADİYE",
+        "description": null,
+        "price": 500.0,
+        "image": "https://qrapi.toyayazilim.com/images/5e37325f-cc60-4fc7-8372-d01811f992b0.jpg"
+      },
+      {
+        "id": 33,
+        "name": "SEZAR TACO",
+        "description": null,
+        "price": 500.0,
+        "image": "https://qrapi.toyayazilim.com/images/9542a79d-6168-4a29-b960-8c3b6d29fea3.jpg"
+      },
+      {
+        "id": 20179,
+        "name": "SHAWARMA CHICKEN",
+        "description": null,
+        "price": 500.0,
+        "image": null
+      }
+    ],
+    "32": [
+      {
+        "id": 13,
+        "name": "PATATES KIZARTMASI",
+        "description": null,
+        "price": 300.0,
+        "image": "https://qrapi.toyayazilim.com/images/95b85075-8eee-4d33-a390-533dad975e3f.jpg"
+      },
+      {
+        "id": 14,
+        "name": "FALAFELLI BÖREK",
+        "description": null,
+        "price": 200.0,
+        "image": "https://qrapi.toyayazilim.com/images/f932ce16-5eda-4e1e-9f17-7562e44cf24b.jpg"
+      },
+      {
+        "id": 15,
+        "name": "PEYNIRLI BÖREK",
+        "description": null,
+        "price": 200.0,
+        "image": "https://qrapi.toyayazilim.com/images/30b2cfc2-fc84-462e-9d1d-ebe464912dab.jpg"
+      },
+      {
+        "id": 20,
+        "name": "PEYNİRLİ SAMBUSAH",
+        "description": null,
+        "price": 60.0,
+        "image": "https://qrapi.toyayazilim.com/images/1c70b9f4-1496-49ad-8efc-960af021d5b5.jpg"
+      },
+      {
+        "id": 21,
+        "name": "TAVUKLU SAMBUSAH",
+        "description": null,
+        "price": 60.0,
+        "image": "https://qrapi.toyayazilim.com/images/7b9e46f5-89fa-4d60-86d6-54f3ed73fcc1.jpg"
+      },
+      {
+        "id": 22,
+        "name": "KIYMALI SAMBUSAH",
+        "description": null,
+        "price": 75.0,
+        "image": "https://qrapi.toyayazilim.com/images/7babe54a-6b8d-4de0-83a0-02e4ba000838.jpg"
+      }
+    ],
+    "12": [
+      {
+        "id": 34,
+        "name": "CHICKEN NUGGETS",
+        "description": null,
+        "price": 600.0,
+        "image": "https://qrapi.toyayazilim.com/images/5ec7dd87-161f-4c90-a7e0-e5149288f97b.jpg"
+      },
+      {
+        "id": 20166,
+        "name": "BURGER",
+        "description": null,
+        "price": 500.0,
+        "image": "https://qrapi.toyayazilim.com/images/37b5de27-68c3-4fd2-ae36-bc49169ac3f6.jpg"
+      },
+      {
+        "id": 20167,
+        "name": "CHICKEN FILLET",
+        "description": null,
+        "price": 400.0,
+        "image": "https://qrapi.toyayazilim.com/images/2f10f05c-41d6-4cb1-b108-095b541f90bc.jpg"
+      }
+    ],
+    "33": [
+      {
+        "id": 17,
+        "name": "MİNİ PİZZA",
+        "description": null,
+        "price": 100.0,
+        "image": "https://qrapi.toyayazilim.com/images/85a08c5f-4fba-4837-8ac3-d0d6ad8349a0.jpg"
+      },
+      {
+        "id": 108,
+        "name": "ZATERLİ FATİRA",
+        "description": null,
+        "price": 75.0,
+        "image": "https://qrapi.toyayazilim.com/images/76ef12fa-6ba9-453b-a1a8-df3c83bc7d53.jpg"
+      },
+      {
+        "id": 10157,
+        "name": "pizza",
+        "description": null,
+        "price": 500.0,
+        "image": null
+      },
+      {
+        "id": 20168,
+        "name": "HINDI TOST",
+        "description": null,
+        "price": 300.0,
+        "image": "https://qrapi.toyayazilim.com/images/94e8cf01-913a-4a53-8043-45fd56953d2b.jpg"
+      }
+    ],
+    "13": [
+      {
+        "id": 37,
+        "name": "KÜNEFE",
+        "description": null,
+        "price": 400.0,
+        "image": "https://qrapi.toyayazilim.com/images/c8154c7a-7661-4258-803d-e6198f075d64.jpg"
+      },
+      {
+        "id": 38,
+        "name": "SÜTLAÇ",
+        "description": null,
+        "price": 250.0,
+        "image": "https://qrapi.toyayazilim.com/images/da0482b3-347c-4ed3-859c-d25fa9fe4ab5.jpg"
+      },
+      {
+        "id": 41,
+        "name": "FRAMBUAZLI CHEESECAKE",
+        "description": null,
+        "price": 400.0,
+        "image": "https://qrapi.toyayazilim.com/images/e28bef23-3bf5-4aaf-b29e-00e96a31cf86.jpg"
+      },
+      {
+        "id": 42,
+        "name": "LİMONLU CHEESECAKE",
+        "description": null,
+        "price": 400.0,
+        "image": "https://qrapi.toyayazilim.com/images/357d2a28-c234-4a4e-bb72-67a7210d7103.jpg"
+      },
+      {
+        "id": 44,
+        "name": "HURMALI KEK",
+        "description": null,
+        "price": 300.0,
+        "image": "https://qrapi.toyayazilim.com/images/abed712e-8df9-4389-8224-407997ba3e80.jpg"
+      },
+      {
+        "id": 45,
+        "name": "TRİLİÇE",
+        "description": null,
+        "price": 250.0,
+        "image": "https://qrapi.toyayazilim.com/images/1b2daf53-0df4-434b-a035-f1ced553c506.jpg"
+      },
+      {
+        "id": 10158,
+        "name": "TIRAMISU",
+        "description": null,
+        "price": 200.0,
+        "image": null
+      },
+      {
+        "id": 20185,
+        "name": "ÇOKO BİSKOT JELLY",
+        "description": null,
+        "price": 200.0,
+        "image": null
+      },
+      {
+        "id": 20187,
+        "name": "NUTELLA DONUTS",
+        "description": null,
+        "price": 200.0,
+        "image": null
+      },
+      {
+        "id": 20190,
+        "name": "ÇOKO KEK",
+        "description": null,
+        "price": 250.0,
+        "image": null
+      },
+      {
+        "id": 20191,
+        "name": "MİNİ DOUNTS",
+        "description": null,
+        "price": 70.0,
+        "image": null
+      },
+      {
+        "id": 20192,
+        "name": "BİTTER ÇİKOLATALO MOCHI X2 ADET",
+        "description": null,
+        "price": 300.0,
+        "image": null
+      },
+      {
+        "id": 20193,
+        "name": "İCE CREAM 1-TOP",
+        "description": null,
+        "price": 100.0,
+        "image": null
+      },
+      {
+        "id": 20194,
+        "name": "OREO CHEESECAKE",
+        "description": null,
+        "price": 350.0,
+        "image": null
+      }
+    ],
+    "34": [
+      {
+        "id": 35,
+        "name": "TAVUK 65",
+        "description": "TAVUK 65 , PİLAV TABAĞI",
+        "price": 1400.0,
+        "image": "https://qrapi.toyayazilim.com/images/0d1ec1c1-6c49-4b16-a546-c73c1d6d93b8.jpg"
+      },
+      {
+        "id": 121,
+        "name": "CHICKEN MANGORIAN",
+        "description": null,
+        "price": 700.0,
+        "image": "https://qrapi.toyayazilim.com/images/bbf7e6a1-7818-46e6-ac5c-49ec7af73648.jpg"
+      },
+      {
+        "id": 10143,
+        "name": "MUTTON MASALA",
+        "description": null,
+        "price": 1000.0,
+        "image": "https://qrapi.toyayazilim.com/images/e1ba0abd-41a1-4a9c-9b57-6d82ccc699ab.jpg"
+      }
+    ],
+    "15": [
+      {
+        "id": 69,
+        "name": "KARAMEL FRAPPE",
+        "description": null,
+        "price": 180.0,
+        "image": "https://qrapi.toyayazilim.com/images/318fd616-6518-4141-87f4-1bd3f0a63a78.jpg"
+      },
+      {
+        "id": 70,
+        "name": "ÇIKOLATALI FRAPPE",
+        "description": null,
+        "price": 180.0,
+        "image": "https://qrapi.toyayazilim.com/images/6d796a72-fb71-4d6b-b291-3fe55ca0bddb.jpg"
+      },
+      {
+        "id": 72,
+        "name": "PORTAKAL SUYU",
+        "description": null,
+        "price": 250.0,
+        "image": "https://qrapi.toyayazilim.com/images/e29fd4b5-f943-42f4-a136-bd92a81aa210.jpg"
+      },
+      {
+        "id": 73,
+        "name": "NAR SUYU",
+        "description": null,
+        "price": 200.0,
+        "image": "https://qrapi.toyayazilim.com/images/c5acdac8-ed30-4f62-abee-a3f0e3b8b662.jpg"
+      },
+      {
+        "id": 74,
+        "name": "LİMONATA",
+        "description": null,
+        "price": 200.0,
+        "image": "https://qrapi.toyayazilim.com/images/3ec5d602-1f02-4c11-8a19-9a59cdb0cb38.jpg"
+      },
+      {
+        "id": 82,
+        "name": "COOL LIME",
+        "description": null,
+        "price": 200.0,
+        "image": "https://qrapi.toyayazilim.com/images/abc14b71-1db3-4a38-9ba2-20fdac4973c6.jpg"
+      },
+      {
+        "id": 83,
+        "name": "BUBBLE TEA",
+        "description": null,
+        "price": 250.0,
+        "image": "https://qrapi.toyayazilim.com/images/56925e50-9dfd-452d-8894-47354b237393.jpg"
+      },
+      {
+        "id": 84,
+        "name": "MOJİTO",
+        "description": null,
+        "price": 250.0,
+        "image": "https://qrapi.toyayazilim.com/images/bb6c3769-be23-4321-9691-e9e9c8044850.jpg"
+      },
+      {
+        "id": 85,
+        "name": "BLUE MOON",
+        "description": null,
+        "price": 250.0,
+        "image": "https://qrapi.toyayazilim.com/images/41f58b68-9e43-4da4-9449-1f93fe73e17b.jpg"
+      },
+      {
+        "id": 86,
+        "name": "ICE HIBUSKUS",
+        "description": null,
+        "price": 250.0,
+        "image": "https://qrapi.toyayazilim.com/images/a67c5cdd-a14e-4056-8969-85994577457d.jpg"
+      },
+      {
+        "id": 120,
+        "name": "HYPE & JOY MUJITO",
+        "description": null,
+        "price": 250.0,
+        "image": null
+      }
+    ],
+    "35": [
+      {
+        "id": 20188,
+        "name": "MR EDS NARGİLE",
+        "description": null,
+        "price": 500.0,
+        "image": null
+      },
+      {
+        "id": 20189,
+        "name": "LÜLE DEĞİŞİMİ",
+        "description": null,
+        "price": 250.0,
+        "image": null
+      }
+    ],
+    "16": [
+      {
+        "id": 62,
+        "name": "ICED LATTE",
+        "description": null,
+        "price": 170.0,
+        "image": "https://qrapi.toyayazilim.com/images/0f59de94-dc7a-4059-a28a-47822f43df8a.jpg"
+      },
+      {
+        "id": 63,
+        "name": "İCED AMERİCANO",
+        "description": null,
+        "price": 160.0,
+        "image": "https://qrapi.toyayazilim.com/images/1f32de9e-3088-4949-bf91-af7209d8ba2c.jpg"
+      },
+      {
+        "id": 64,
+        "name": "İCED SPANİSH LATTE",
+        "description": null,
+        "price": 200.0,
+        "image": "https://qrapi.toyayazilim.com/images/a5b6d92c-3aef-4c97-b7a3-757418730ec1.jpg"
+      },
+      {
+        "id": 65,
+        "name": "İCE MOCHA",
+        "description": null,
+        "price": 180.0,
+        "image": "https://qrapi.toyayazilim.com/images/2c1355cc-4fa3-4f11-80aa-2178c2965f56.jpg"
+      },
+      {
+        "id": 66,
+        "name": "İCE WHİTE MOCHA",
+        "description": null,
+        "price": 180.0,
+        "image": "https://qrapi.toyayazilim.com/images/97c3832c-6404-4743-8abe-95b65250a95b.jpg"
+      },
+      {
+        "id": 68,
+        "name": "ICED LAHFA LATTE",
+        "description": null,
+        "price": 220.0,
+        "image": "https://qrapi.toyayazilim.com/images/8fb026df-8926-4e1c-aed4-c12529cdadaa.jpg"
+      },
+      {
+        "id": 71,
+        "name": "COLD BREW",
+        "description": null,
+        "price": 170.0,
+        "image": "https://qrapi.toyayazilim.com/images/63b1d29d-c2dd-43d0-8a5f-c4b9d3e93d29.jpg"
+      },
+      {
+        "id": 116,
+        "name": "İCE V 60 ETİYOPYA",
+        "description": null,
+        "price": 250.0,
+        "image": null
+      },
+      {
+        "id": 10147,
+        "name": "ICE KARAMELLİ LATTE",
+        "description": null,
+        "price": 180.0,
+        "image": "https://qrapi.toyayazilim.com/images/56b9d85f-745a-4d7a-ab34-8221edb0e742.jpg"
+      }
+    ],
+    "19": [
+      {
+        "id": 3,
+        "name": "DOUBLE TURK KAHVESI",
+        "description": "قهوة تركية دبل",
+        "price": 150.0,
+        "image": "https://qrapi.toyayazilim.com/images/59c816a2-d58b-4202-8571-9ead5bb3e6b9.jpg"
+      },
+      {
+        "id": 39,
+        "name": "SÜTLÜ TÜRK KAHVESİ",
+        "description": null,
+        "price": 130.0,
+        "image": null
+      },
+      {
+        "id": 40,
+        "name": "DOUBLE SÜTLÜ TÜRK KAHVESİ",
+        "description": null,
+        "price": 160.0,
+        "image": "https://qrapi.toyayazilim.com/images/84088277-2939-42e0-96c8-06830303e288.jpg"
+      },
+      {
+        "id": 47,
+        "name": "AMERICANO",
+        "description": null,
+        "price": 155.0,
+        "image": "https://qrapi.toyayazilim.com/images/35bc7c78-4f1c-4285-a174-e724f3422da4.jpg"
+      },
+      {
+        "id": 48,
+        "name": "CUPPUCCİNO",
+        "description": null,
+        "price": 160.0,
+        "image": "https://qrapi.toyayazilim.com/images/c993ee4c-31b1-4362-9d57-9d0ac8ac58ac.jpg"
+      },
+      {
+        "id": 49,
+        "name": "LATTE",
+        "description": null,
+        "price": 160.0,
+        "image": "https://qrapi.toyayazilim.com/images/47b4e51a-fe43-4366-a223-d8890212570b.jpg"
+      },
+      {
+        "id": 52,
+        "name": "FLAT WHİTE",
+        "description": null,
+        "price": 180.0,
+        "image": "https://qrapi.toyayazilim.com/images/c5193b05-f135-497e-881f-1139d7afa121.jpg"
+      },
+      {
+        "id": 53,
+        "name": "CORTADO",
+        "description": null,
+        "price": 180.0,
+        "image": "https://qrapi.toyayazilim.com/images/b4395acf-d709-4052-bfe3-b4345ea9057b.jpg"
+      },
+      {
+        "id": 54,
+        "name": "SPANİSH LATTE",
+        "description": null,
+        "price": 200.0,
+        "image": "https://qrapi.toyayazilim.com/images/e01db1cb-0a54-4b39-b539-3721d5196664.jpg"
+      },
+      {
+        "id": 55,
+        "name": "WHİTE MOCHA",
+        "description": null,
+        "price": 200.0,
+        "image": "https://qrapi.toyayazilim.com/images/55a801c1-fac7-4c95-87b6-ff876bb29cad.jpg"
+      },
+      {
+        "id": 57,
+        "name": "LAHFA LATTE",
+        "description": null,
+        "price": 220.0,
+        "image": "https://qrapi.toyayazilim.com/images/c012d7b7-8d8b-4a67-8805-64444cff7591.jpg"
+      },
+      {
+        "id": 59,
+        "name": "TURK KAHVESİ",
+        "description": null,
+        "price": 120.0,
+        "image": "https://qrapi.toyayazilim.com/images/4dec87c3-9fa2-4dcf-874a-6d016b633a1c.jpg"
+      },
+      {
+        "id": 60,
+        "name": "ARAP KAHVESİ",
+        "description": null,
+        "price": 600.0,
+        "image": "https://qrapi.toyayazilim.com/images/0c7ddf2d-37ae-4a5b-9201-2e882085a9ce.jpg"
+      },
+      {
+        "id": 118,
+        "name": "HOT V 60 ETİYOPYA",
+        "description": null,
+        "price": 250.0,
+        "image": null
+      },
+      {
+        "id": 10127,
+        "name": "ESPRESSO DOUBLE",
+        "description": null,
+        "price": 150.0,
+        "image": "https://qrapi.toyayazilim.com/images/56468e95-fd1d-4dd8-8a7e-ec0aac7d8622.jpg"
+      },
+      {
+        "id": 10145,
+        "name": "KARAMELLİ LATTE",
+        "description": null,
+        "price": 200.0,
+        "image": "https://qrapi.toyayazilim.com/images/bb559964-1d29-4527-8e24-0365d54bc111.jpg"
+      },
+      {
+        "id": 10151,
+        "name": "MOCHA",
+        "description": null,
+        "price": 180.0,
+        "image": null
+      },
+      {
+        "id": 10160,
+        "name": "ESSPRESO",
+        "description": null,
+        "price": 120.0,
+        "image": null
+      },
+      {
+        "id": 10162,
+        "name": "ESPRESSO",
+        "description": null,
+        "price": 120.0,
+        "image": "https://qrapi.toyayazilim.com/images/b7a5c1ab-44dd-4d27-bb38-7c80b8ea9a16.jpg"
+      }
+    ],
+    "20": [
+      {
+        "id": 76,
+        "name": "Coca Cola 330ml",
+        "description": null,
+        "price": 75.0,
+        "image": "https://qrapi.toyayazilim.com/images/ba9f7639-31e2-4b04-bacc-e8de8399ff12.jpg"
+      },
+      {
+        "id": 77,
+        "name": "Fanta 330ml",
+        "description": null,
+        "price": 75.0,
+        "image": "https://qrapi.toyayazilim.com/images/4f987e5f-7b2e-47e7-a58c-30b8fcf17625.jpg"
+      },
+      {
+        "id": 78,
+        "name": "Sprite 330ml",
+        "description": null,
+        "price": 75.0,
+        "image": "https://qrapi.toyayazilim.com/images/20725b27-738b-4aa1-b3b2-bd838225a828.jpg"
+      },
+      {
+        "id": 79,
+        "name": "Mineralli Soda Su Uludağ Premium 250ml",
+        "description": null,
+        "price": 75.0,
+        "image": "https://qrapi.toyayazilim.com/images/5f69b65e-0297-48e9-80a1-fec6b489912a.jpg"
+      },
+      {
+        "id": 80,
+        "name": "Su Uludağ Premium 1000ml",
+        "description": null,
+        "price": 55.0,
+        "image": "https://qrapi.toyayazilim.com/images/e413c7e5-eeb9-4b36-ac9d-ee5ce196d217.jpg"
+      },
+      {
+        "id": 81,
+        "name": "Su Uludağ Premium 400ml",
+        "description": null,
+        "price": 45.0,
+        "image": "https://qrapi.toyayazilim.com/images/aa8e160a-dff2-4641-ae19-3a5fcd375be7.jpg"
+      },
+      {
+        "id": 20181,
+        "name": "Sarıyer Portakal Aromalı Gazoz 330ml",
+        "description": null,
+        "price": 75.0,
+        "image": null
+      },
+      {
+        "id": 20182,
+        "name": "Coca Cola Zero 330ml",
+        "description": null,
+        "price": 75.0,
+        "image": null
+      },
+      {
+        "id": 20186,
+        "name": "Cappy %100 Portakal Suyu",
+        "description": null,
+        "price": 150.0,
+        "image": null
+      }
+    ],
+    "21": [
+      {
+        "id": 50,
+        "name": "KARAK ÇAYI (HİNT SÜTLÜ ÇAYI)",
+        "description": null,
+        "price": 150.0,
+        "image": "https://qrapi.toyayazilim.com/images/7c3347c8-69f1-4adc-b9c5-be8a7ad321d2.jpg"
+      },
+      {
+        "id": 51,
+        "name": "ÇAY",
+        "description": null,
+        "price": 50.0,
+        "image": "https://qrapi.toyayazilim.com/images/1174c30b-978e-4ff8-b971-ad4e87414d34.jpg"
+      },
+      {
+        "id": 109,
+        "name": "TERMUS KARAK ÇAYI (HİNT SÜTLÜ ÇAYI)",
+        "description": null,
+        "price": 500.0,
+        "image": "https://qrapi.toyayazilim.com/images/5ed213b8-ad4a-46bb-94c7-d2c1a3a18684.jpg"
+      },
+      {
+        "id": 111,
+        "name": "TERMUS ÇAY",
+        "description": null,
+        "price": 300.0,
+        "image": "https://qrapi.toyayazilim.com/images/4148e9af-283c-4edd-a0e6-95713faa4e17.jpg"
+      },
+      {
+        "id": 114,
+        "name": "FİNCAN ÇAY",
+        "description": null,
+        "price": 100.0,
+        "image": "https://qrapi.toyayazilim.com/images/0579bc23-30ec-4f0e-87c8-09645380f004.jpg"
+      }
+    ],
+    "22": [
+      {
+        "id": 10148,
+        "name": "YEŞİL ÇAY",
+        "description": null,
+        "price": 150.0,
+        "image": "https://qrapi.toyayazilim.com/images/c1055d75-90b8-4523-9e0e-f722c52c6f74.jpg"
+      },
+      {
+        "id": 10149,
+        "name": "LİMONLU YEŞİL ÇAY",
+        "description": null,
+        "price": 150.0,
+        "image": "https://qrapi.toyayazilim.com/images/3bf18582-feeb-4741-965d-009b405c1690.jpg"
+      },
+      {
+        "id": 20172,
+        "name": "LİMONLU ZENCEFİLLİ YEŞİL ÇAY",
+        "description": null,
+        "price": 150.0,
+        "image": "https://qrapi.toyayazilim.com/images/7051d463-35ff-40be-b72c-70b61c6fe60e.jpg"
+      },
+      {
+        "id": 20175,
+        "name": "YASEMİNLİ YEŞİL ÇAY",
+        "description": null,
+        "price": 150.0,
+        "image": null
+      }
+    ]
+  }
+}

@@ -1,18 +1,19 @@
 import { useState, useEffect } from 'react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { HeaderNew } from '@/components/HeaderNew';
-import { CategoriesGrid } from '@/components/CategoriesGrid';
-import { CategoryDetails } from '@/components/CategoryDetails';
+import { CategoriesGridReal } from '@/components/CategoriesGridReal';
+import { CategoryDetailsReal } from '@/components/CategoryDetailsReal';
 
 export default function Home() {
-  const { language, data, switchLanguage } = useLanguage();
+  const { language, switchLanguage } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   // Set document direction and language on mount and when language changes
   useEffect(() => {
-    document.documentElement.dir = data.direction;
+    const isRTL = language === 'ar';
+    document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
     document.documentElement.lang = language;
-  }, [language, data]);
+  }, [language]);
 
   const handleBack = () => {
     setSelectedCategory(null);
@@ -21,17 +22,17 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <HeaderNew
-        currentLanguage={language}
-        onLanguageChange={switchLanguage}
+        currentLanguage={language as 'ar' | 'en' | 'tr'}
+        onLanguageChange={(lang) => switchLanguage(lang as 'ar' | 'en' | 'tr')}
         onBack={handleBack}
         showBack={selectedCategory !== null}
       />
 
       <main className="flex-1">
         {selectedCategory ? (
-          <CategoryDetails categoryId={selectedCategory} language={language} data={data} />
+          <CategoryDetailsReal categoryId={selectedCategory} language={language as 'ar' | 'en'} />
         ) : (
-          <CategoriesGrid language={language} onSelectCategory={setSelectedCategory} />
+          <CategoriesGridReal language={language as 'ar' | 'en'} onSelectCategory={setSelectedCategory} />
         )}
       </main>
     </div>
