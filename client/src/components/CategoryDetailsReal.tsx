@@ -1,4 +1,4 @@
-import { useRealMenuData } from '@/hooks/useRealMenuData';
+import { useMenuStorage } from '@/hooks/useMenuStorage';
 import { Card } from '@/components/ui/card';
 
 interface CategoryDetailsRealProps {
@@ -7,25 +7,34 @@ interface CategoryDetailsRealProps {
 }
 
 export function CategoryDetailsReal({ categoryId, language }: CategoryDetailsRealProps) {
-  const { getCategoryName, getCategoryImage, getCategoryProducts, formatPrice } = useRealMenuData();
+  const { data } = useMenuStorage();
 
-  const categoryName = getCategoryName(categoryId, language);
-  const categoryImage = getCategoryImage(categoryId);
-  const products = getCategoryProducts(categoryId);
-
-  if (!categoryName || products.length === 0) {
+  if (!data) {
     return null;
   }
+
+  const category = data.categories.find((c) => c.id === categoryId);
+  const products = data.products[categoryId] || [];
+
+  if (!category || products.length === 0) {
+    return null;
+  }
+
+  const categoryName = language === 'ar' ? category.name_ar : category.name_en;
+
+  const formatPrice = (price: number): string => {
+    return price.toFixed(2);
+  };
 
   return (
     <section className="py-6 md:py-8">
       <div className="container mx-auto px-4">
         {/* Category Header */}
         <div className="mb-8">
-          {categoryImage && (
+          {category.image && (
             <div className="relative h-48 md:h-64 rounded-lg overflow-hidden mb-6">
               <img
-                src={categoryImage}
+                src={category.image}
                 alt={categoryName}
                 className="w-full h-full object-cover"
               />

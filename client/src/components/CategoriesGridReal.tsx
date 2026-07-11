@@ -1,4 +1,4 @@
-import { useRealMenuData } from '@/hooks/useRealMenuData';
+import { useMenuStorage } from '@/hooks/useMenuStorage';
 import { Card } from '@/components/ui/card';
 
 interface CategoriesGridRealProps {
@@ -7,10 +7,20 @@ interface CategoriesGridRealProps {
 }
 
 export function CategoriesGridReal({ language, onSelectCategory }: CategoriesGridRealProps) {
-  const { categories, getCategoryName } = useRealMenuData();
+  const { data } = useMenuStorage();
+
+  if (!data) {
+    return null;
+  }
+
+  const getCategoryName = (categoryId: string): string => {
+    const category = data.categories.find((c) => c.id === categoryId);
+    if (!category) return '';
+    return language === 'ar' ? category.name_ar : category.name_en;
+  };
 
   // فلترة الفئات التي لديها صور فقط
-  const categoriesWithImages = categories.filter((cat) => cat.image);
+  const categoriesWithImages = data.categories.filter((cat) => cat.image);
 
   return (
     <section className="py-6 md:py-8">
@@ -26,7 +36,7 @@ export function CategoriesGridReal({ language, onSelectCategory }: CategoriesGri
                 {/* Image */}
                 <img
                   src={category.image}
-                  alt={getCategoryName(category.id, language)}
+                  alt={getCategoryName(category.id)}
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
                   loading="lazy"
                 />
@@ -37,7 +47,7 @@ export function CategoriesGridReal({ language, onSelectCategory }: CategoriesGri
                 {/* Content */}
                 <div className="absolute inset-0 flex flex-col items-center justify-end p-4">
                   <h3 className="text-sm md:text-base font-semibold text-white text-center line-clamp-2">
-                    {getCategoryName(category.id, language)}
+                    {getCategoryName(category.id)}
                   </h3>
                 </div>
               </Card>
