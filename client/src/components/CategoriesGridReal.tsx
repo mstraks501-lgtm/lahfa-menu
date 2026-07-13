@@ -16,7 +16,8 @@ export function CategoriesGridReal({ language, onSelectCategory }: CategoriesGri
   const getCategoryName = (categoryId: string): string => {
     const category = data.categories.find((c) => c.id === categoryId);
     if (!category) return '';
-    return language === 'ar' ? category.name_ar : category.name_en;
+    if (language === 'ar') return category.name_ar || category.name_tr || '';
+    return category.name_en || category.name_tr || '';
   };
 
   // فلترة الفئات التي لديها صور فقط

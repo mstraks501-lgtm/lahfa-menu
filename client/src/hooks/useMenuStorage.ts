@@ -12,7 +12,12 @@ export interface Category {
 export interface Product {
   id: number;
   name: string;
+  name_tr: string;
+  name_ar: string;
+  name_en: string;
   description: string | null;
+  description_ar: string | null;
+  description_en: string | null;
   price: number;
   image: string | null;
 }
@@ -55,8 +60,13 @@ export function useMenuStorage() {
         }
         products[categoryId].push({
           id: item.id,
-          name: item.name || item.nameAr || '',
-          description: item.description || item.descriptionAr || null,
+          name: item.name || '',
+          name_tr: item.name || '',
+          name_ar: item.nameAr || item.name || '',
+          name_en: item.nameEn || item.name || '',
+          description: item.description || null,
+          description_ar: item.descriptionAr || item.description || null,
+          description_en: item.descriptionEn || item.description || null,
           price: item.price || 0,
           image: item.image || null,
         });
@@ -72,7 +82,26 @@ export function useMenuStorage() {
     if (allData.isError) {
       // Fallback: try to load from static import if API fails
       import('@/data/realMenuData.json').then((mod) => {
-        setData(mod.default as MenuData);
+        const raw = mod.default as any;
+        // Transform old format to new format
+        const categories = raw.categories.map((cat: any) => ({
+          ...cat,
+          name_tr: cat.name_tr || '',
+          name_ar: cat.name_ar || '',
+          name_en: cat.name_en || '',
+        }));
+        const products: Record<string, Product[]> = {};
+        for (const [catId, prods] of Object.entries(raw.products)) {
+          products[catId] = (prods as any[]).map(p => ({
+            ...p,
+            name_tr: p.name || '',
+            name_ar: p.name || '',
+            name_en: p.name || '',
+            description_ar: p.description || null,
+            description_en: p.description || null,
+          }));
+        }
+        setData({ categories, products });
         setIsLoaded(true);
       }).catch(() => {
         setIsLoaded(true);
@@ -80,18 +109,13 @@ export function useMenuStorage() {
     }
   }, [allData.isError]);
 
-  // Dummy functions for backward compatibility (admin uses tRPC directly now)
-  const saveData = (newData: MenuData) => {
-    setData(newData);
-  };
-
-  const addProduct = (categoryId: string, product: Omit<Product, 'id'>) => {};
-  const updateProduct = (categoryId: string, productId: number, updates: Partial<Product>) => {};
-  const deleteProduct = (categoryId: string, productId: number) => {};
-  const updateCategory = (categoryId: string, updates: Partial<Category>) => {};
-  const resetData = () => {
-    allData.refetch();
-  };
+  // Dummy functions for backward compatibility
+  const saveData = (newData: MenuData) => { setData(newData); };
+  const addProduct = () => {};
+  const updateProduct = () => {};
+  const deleteProduct = () => {};
+  const updateCategory = () => {};
+  const resetData = () => { allData.refetch(); };
 
   return {
     data,
