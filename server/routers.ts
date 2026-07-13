@@ -44,7 +44,7 @@ export const appRouter = router({
         id: z.string(),
         categoryId: z.string(),
         name: z.string(),
-        nameAr: z.string(),
+        nameAr: z.string().nullable().optional().default(''),
         nameEn: z.string().nullable().optional().default(''),
         price: z.number(),
         description: z.string().nullable().optional().default(''),
@@ -56,6 +56,7 @@ export const appRouter = router({
         // Convert null to empty string
         const cleanedInput = {
           ...input,
+          nameAr: input.nameAr || '',
           nameEn: input.nameEn || '',
           description: input.description || '',
           descriptionAr: input.descriptionAr || '',
@@ -65,11 +66,91 @@ export const appRouter = router({
         return menuStorage.upsertItem(cleanedInput as any);
       }),
 
+    // Add new item (admin)
+    addItem: publicProcedure
+      .input(z.object({
+        categoryId: z.string(),
+        name: z.string(),
+        nameAr: z.string().nullable().optional().default(''),
+        nameEn: z.string().nullable().optional().default(''),
+        price: z.number(),
+        description: z.string().nullable().optional().default(''),
+        descriptionAr: z.string().nullable().optional().default(''),
+        descriptionEn: z.string().nullable().optional().default(''),
+        image: z.string().nullable().optional().default(''),
+      }))
+      .mutation(({ input }) => {
+        const data = menuStorage.readMenuData();
+        const newId = String(Math.max(...data.items.map(i => parseInt(i.id) || 0), 0) + 1);
+        const newItem = {
+          id: newId,
+          categoryId: input.categoryId,
+          name: input.name || '',
+          nameAr: input.nameAr || '',
+          nameEn: input.nameEn || '',
+          price: input.price || 0,
+          description: input.description || '',
+          descriptionAr: input.descriptionAr || '',
+          descriptionEn: input.descriptionEn || '',
+          image: input.image || '',
+        };
+        return menuStorage.upsertItem(newItem as any);
+      }),
+
     // Delete item (admin)
     deleteItem: publicProcedure
       .input(z.object({ id: z.string() }))
       .mutation(({ input }) => {
         const success = menuStorage.deleteItem(input.id);
+        return { success };
+      }),
+
+    // Update category (admin)
+    updateCategory: publicProcedure
+      .input(z.object({
+        id: z.string(),
+        name: z.string(),
+        nameAr: z.string().nullable().optional().default(''),
+        nameEn: z.string().nullable().optional().default(''),
+        image: z.string().nullable().optional().default(''),
+      }))
+      .mutation(({ input }) => {
+        const cleanedInput = {
+          id: input.id,
+          name: input.name || '',
+          nameAr: input.nameAr || '',
+          nameEn: input.nameEn || '',
+          image: input.image || '',
+        };
+        return menuStorage.upsertCategory(cleanedInput as any);
+      }),
+
+    // Add new category (admin)
+    addCategory: publicProcedure
+      .input(z.object({
+        name: z.string(),
+        nameAr: z.string().nullable().optional().default(''),
+        nameEn: z.string().nullable().optional().default(''),
+        image: z.string().nullable().optional().default(''),
+      }))
+      .mutation(({ input }) => {
+        const data = menuStorage.readMenuData();
+        const newId = String(Math.max(...data.categories.map(c => parseInt(c.id) || 0), 0) + 1);
+        const newCategory = {
+          id: newId,
+          name: input.name || '',
+          nameAr: input.nameAr || '',
+          nameEn: input.nameEn || '',
+          image: input.image || '',
+        };
+        return menuStorage.upsertCategory(newCategory as any);
+      }),
+
+    // Delete category (admin)
+    deleteCategory: publicProcedure
+      .input(z.object({ id: z.string() }))
+      .mutation(({ input }) => {
+        const success = menuStorage.deleteCategory(input.id);
         return { success };
       }),
 
