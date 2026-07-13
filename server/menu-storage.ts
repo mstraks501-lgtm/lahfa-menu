@@ -16,10 +16,10 @@ export interface MenuItem {
   nameAr: string;
   nameEn: string;
   price: number;
-  description?: string;
-  descriptionAr?: string;
-  descriptionEn?: string;
-  image?: string;
+  description: string;
+  descriptionAr: string;
+  descriptionEn: string;
+  image: string;
 }
 
 export interface Category {
@@ -27,7 +27,7 @@ export interface Category {
   name: string;
   nameAr: string;
   nameEn: string;
-  image?: string;
+  image: string;
 }
 
 export interface MenuData {

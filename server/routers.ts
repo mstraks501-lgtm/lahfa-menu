@@ -45,15 +45,24 @@ export const appRouter = router({
         categoryId: z.string(),
         name: z.string(),
         nameAr: z.string(),
-        nameEn: z.string(),
+        nameEn: z.string().nullable().optional().default(''),
         price: z.number(),
-        description: z.string().optional(),
-        descriptionAr: z.string().optional(),
-        descriptionEn: z.string().optional(),
-        image: z.string().optional(),
+        description: z.string().nullable().optional().default(''),
+        descriptionAr: z.string().nullable().optional().default(''),
+        descriptionEn: z.string().nullable().optional().default(''),
+        image: z.string().nullable().optional().default(''),
       }))
       .mutation(({ input }) => {
-        return menuStorage.upsertItem(input);
+        // Convert null to empty string
+        const cleanedInput = {
+          ...input,
+          nameEn: input.nameEn || '',
+          description: input.description || '',
+          descriptionAr: input.descriptionAr || '',
+          descriptionEn: input.descriptionEn || '',
+          image: input.image || '',
+        };
+        return menuStorage.upsertItem(cleanedInput as any);
       }),
 
     // Delete item (admin)
