@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import realMenuData from '@/data/realMenuData.json';
+import { trpc } from '@/lib/trpc';
 
 export interface Category {
   id: string;
@@ -22,99 +22,75 @@ export interface MenuData {
   products: Record<string, Product[]>;
 }
 
-const STORAGE_KEY = 'lahfa_menu_data';
-
 export function useMenuStorage() {
   const [data, setData] = useState<MenuData | null>(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // تحميل البيانات من localStorage أو البيانات الافتراضية
-  useEffect(() => {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored) {
-      try {
-        setData(JSON.parse(stored));
-      } catch {
-        setData(realMenuData as MenuData);
-      }
-    } else {
-      setData(realMenuData as MenuData);
-    }
-    setIsLoaded(true);
-  }, []);
+  // Fetch data from server API
+  const allData = trpc.menu.getAllData.useQuery(undefined, {
+    refetchOnWindowFocus: true,
+    staleTime: 10000, // 10 seconds
+  });
 
-  // حفظ البيانات في localStorage
+  useEffect(() => {
+    if (allData.data) {
+      // Transform server data format to frontend format
+      const serverData = allData.data as any;
+      
+      // Transform categories: server uses {name, nameAr, nameEn} -> frontend uses {name_tr, name_ar, name_en}
+      const categories: Category[] = (serverData.categories || []).map((cat: any) => ({
+        id: cat.id,
+        name_tr: cat.name || '',
+        name_en: cat.nameEn || cat.name || '',
+        name_ar: cat.nameAr || cat.name || '',
+        image: cat.image || '',
+      }));
+
+      // Transform items: server uses flat array -> frontend uses dict keyed by categoryId
+      const products: Record<string, Product[]> = {};
+      (serverData.items || []).forEach((item: any) => {
+        const categoryId = item.categoryId;
+        if (!products[categoryId]) {
+          products[categoryId] = [];
+        }
+        products[categoryId].push({
+          id: item.id,
+          name: item.name || item.nameAr || '',
+          description: item.description || item.descriptionAr || null,
+          price: item.price || 0,
+          image: item.image || null,
+        });
+      });
+
+      setData({ categories, products });
+      setIsLoaded(true);
+    }
+  }, [allData.data]);
+
+  // Handle loading state
+  useEffect(() => {
+    if (allData.isError) {
+      // Fallback: try to load from static import if API fails
+      import('@/data/realMenuData.json').then((mod) => {
+        setData(mod.default as MenuData);
+        setIsLoaded(true);
+      }).catch(() => {
+        setIsLoaded(true);
+      });
+    }
+  }, [allData.isError]);
+
+  // Dummy functions for backward compatibility (admin uses tRPC directly now)
   const saveData = (newData: MenuData) => {
     setData(newData);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(newData));
   };
 
-  // إضافة منتج جديد
-  const addProduct = (categoryId: string, product: Omit<Product, 'id'>) => {
-    if (!data) return;
-
-    const newData = { ...data };
-    const categoryProducts = newData.products[categoryId] || [];
-    const newId = Math.max(...categoryProducts.map((p) => p.id), 0) + 1;
-
-    newData.products[categoryId] = [
-      ...categoryProducts,
-      { ...product, id: newId },
-    ];
-
-    saveData(newData);
-  };
-
-  // تعديل منتج
-  const updateProduct = (
-    categoryId: string,
-    productId: number,
-    updates: Partial<Product>
-  ) => {
-    if (!data) return;
-
-    const newData = { ...data };
-    const categoryProducts = newData.products[categoryId] || [];
-
-    newData.products[categoryId] = categoryProducts.map((p) =>
-      p.id === productId ? { ...p, ...updates } : p
-    );
-
-    saveData(newData);
-  };
-
-  // حذف منتج
-  const deleteProduct = (categoryId: string, productId: number) => {
-    if (!data) return;
-
-    const newData = { ...data };
-    newData.products[categoryId] = (newData.products[categoryId] || []).filter(
-      (p) => p.id !== productId
-    );
-
-    saveData(newData);
-  };
-
-  // تعديل فئة
-  const updateCategory = (categoryId: string, updates: Partial<Category>) => {
-    if (!data) return;
-
-    const newData = { ...data };
-    const categoryIndex = newData.categories.findIndex((c) => c.id === categoryId);
-
-    if (categoryIndex !== -1) {
-      newData.categories[categoryIndex] = {
-        ...newData.categories[categoryIndex],
-        ...updates,
-      };
-      saveData(newData);
-    }
-  };
-
-  // إعادة تعيين البيانات للقيم الافتراضية
+  const addProduct = (categoryId: string, product: Omit<Product, 'id'>) => {};
+  const updateProduct = (categoryId: string, productId: number, updates: Partial<Product>) => {};
+  const deleteProduct = (categoryId: string, productId: number) => {};
+  const updateCategory = (categoryId: string, updates: Partial<Category>) => {};
   const resetData = () => {
-    setData(realMenuData as MenuData);
-    localStorage.removeItem(STORAGE_KEY);
+    allData.refetch();
   };
 
   return {
