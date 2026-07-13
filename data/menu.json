@@ -4,189 +4,189 @@
       "id": "3",
       "name": "KAHVALTI | BREAKFAST",
       "nameAr": "الإفطار",
-      "nameEn": "BREAKFAST",
+      "nameEn": "Breakfast",
       "image": "https://qrapi.toyayazilim.com/images/b936e384-b53e-4711-85ce-ba2967ae799c.jpg"
     },
     {
       "id": "25",
       "name": "BİTKİ ÇAYLARI | HERBAL TEAS",
       "nameAr": "شاي الأعشاب",
-      "nameEn": "HERBAL TEAS",
+      "nameEn": "Herbal Teas",
       "image": "https://qrapi.toyayazilim.com/images/28ef5a7f-df64-4637-82b7-a3294c3424fc.jpg"
     },
     {
       "id": "5",
       "name": "ANA YEMEKLER",
-      "nameAr": "ANA YEMEKLER",
-      "nameEn": "ANA YEMEKLER",
+      "nameAr": "الأطباق الرئيسية",
+      "nameEn": "Main Dishes",
       "image": "https://qrapi.toyayazilim.com/images/b6b24dc6-ad9a-42c4-90b7-f851932c08f5.jpg"
     },
     {
       "id": "26",
       "name": "MEYVE ÇAYLARI | FRUIT TEAS",
       "nameAr": "شاي الفواكه",
-      "nameEn": "FRUIT TEAS",
+      "nameEn": "Fruit Teas",
       "image": "https://qrapi.toyayazilim.com/images/522f0bd2-c483-401b-b712-d47f4b079c99.jpg"
     },
     {
       "id": "6",
       "name": "ÇORBALAR | SOUPS",
       "nameAr": "الحساء",
-      "nameEn": "SOUPS",
+      "nameEn": "Soups",
       "image": "https://qrapi.toyayazilim.com/images/76dc9322-66cd-43b7-9204-a4753af162ed.jpg"
     },
     {
       "id": "27",
       "name": "KIŞ İÇECEKLERİ | WINTER BEVERAGES",
       "nameAr": "المشروبات الشتوية",
-      "nameEn": "WINTER BEVERAGES",
+      "nameEn": "Winter Beverages",
       "image": "https://qrapi.toyayazilim.com/images/d667b3d5-4e99-4187-8c58-0b0cbc40eb26.jpg"
     },
     {
       "id": "7",
       "name": "SALATALAR | SALADS",
       "nameAr": "السلطات",
-      "nameEn": "SALADS",
+      "nameEn": "Salads",
       "image": "https://qrapi.toyayazilim.com/images/6daf3d40-5274-4c9c-ba24-d15f1737a6f0.jpg"
     },
     {
       "id": "28",
       "name": "DENİZ ÜRÜNLERİ | SEA FOOD",
       "nameAr": "المأكولات البحرية",
-      "nameEn": "SEA FOOD",
+      "nameEn": "Seafood",
       "image": ""
     },
     {
       "id": "8",
       "name": "APERATİFLER | APPETİZERS",
-      "nameAr": "APPETİZERS",
-      "nameEn": "APPETİZERS",
+      "nameAr": "المقبلات",
+      "nameEn": "Appetizers",
       "image": "https://qrapi.toyayazilim.com/images/8535bb1b-d757-47ab-8a6e-bd5598a14257.jpg"
     },
     {
       "id": "29",
       "name": "TAVUKLU KABSALAR | CHİCKEN RİCE",
-      "nameAr": "CHİCKEN RİCE",
-      "nameEn": "CHİCKEN RİCE",
+      "nameAr": "كبسة الدجاج",
+      "nameEn": "Chicken Rice",
       "image": ""
     },
     {
       "id": "9",
       "name": "ARAP YÖRESEL YEMEKLERİ | TRADİTİONAL DİSHES",
-      "nameAr": "TRADİTİONAL DİSHES",
-      "nameEn": "TRADİTİONAL DİSHES",
+      "nameAr": "الأطباق العربية التقليدية",
+      "nameEn": "Traditional Dishes",
       "image": "https://qrapi.toyayazilim.com/images/f52d53ec-6829-447f-937f-16608e8a0a14.jpg"
     },
     {
       "id": "30",
       "name": "ETLİ KABSALAR | MEAT RİCE",
-      "nameAr": "MEAT RİCE",
-      "nameEn": "MEAT RİCE",
+      "nameAr": "كبسة اللحم",
+      "nameEn": "Meat Rice",
       "image": ""
     },
     {
       "id": "10",
       "name": "MAKARNA | PASTAS",
       "nameAr": "المعكرونة",
-      "nameEn": "PASTAS",
+      "nameEn": "Pastas",
       "image": "https://qrapi.toyayazilim.com/images/a0737bc1-aa28-4cd9-a0a0-3574690ceddb.jpg"
     },
     {
       "id": "31",
       "name": "EKMEK & PİLAV | BREAD & RİCE",
-      "nameAr": "BREAD & RİCE",
-      "nameEn": "BREAD & RİCE",
+      "nameAr": "الخبز والأرز",
+      "nameEn": "Bread & Rice",
       "image": ""
     },
     {
       "id": "11",
       "name": "TACO ÇEŞİTLERİ | TACOS",
       "nameAr": "التاكو",
-      "nameEn": "TACOS",
+      "nameEn": "Tacos",
       "image": "https://qrapi.toyayazilim.com/images/1a2f0373-25ba-48f8-b19e-10afb234011b.jpg"
     },
     {
       "id": "32",
       "name": "KIZARTMALAR | FRİED İTEMS",
-      "nameAr": "FRİED İTEMS",
-      "nameEn": "FRİED İTEMS",
+      "nameAr": "المقليات",
+      "nameEn": "Fried Items",
       "image": ""
     },
     {
       "id": "12",
       "name": "ÇITIR TAVUK | FRİED CHİCKEN",
-      "nameAr": "FRİED CHİCKEN",
-      "nameEn": "FRİED CHİCKEN",
+      "nameAr": "الدجاج المقرمش",
+      "nameEn": "Fried Chicken",
       "image": "https://qrapi.toyayazilim.com/images/e6c61cf4-411b-4a78-9e6f-7f412a8cf880.jpg"
     },
     {
       "id": "33",
       "name": "FIRIN ÜRÜNLERİ | BAKERY İTEMS",
-      "nameAr": "BAKERY İTEMS",
-      "nameEn": "BAKERY İTEMS",
+      "nameAr": "المخبوزات",
+      "nameEn": "Bakery Items",
       "image": ""
     },
     {
       "id": "13",
       "name": "TATLILAR | DESSERTS",
       "nameAr": "الحلويات",
-      "nameEn": "DESSERTS",
+      "nameEn": "Desserts",
       "image": "https://qrapi.toyayazilim.com/images/6db573ef-90da-4738-917b-0203c0ea3d43.jpg"
     },
     {
       "id": "34",
       "name": "HİNT YEMEKLERİ | İNDİAN DİSHES",
-      "nameAr": "İNDİAN DİSHES",
-      "nameEn": "İNDİAN DİSHES",
+      "nameAr": "الأطباق الهندية",
+      "nameEn": "Indian Dishes",
       "image": ""
     },
     {
       "id": "15",
       "name": "SOĞUK İÇECEKLER | COLD DRINKS",
       "nameAr": "المشروبات الباردة",
-      "nameEn": "COLD DRINKS",
+      "nameEn": "Cold Drinks",
       "image": "https://qrapi.toyayazilim.com/images/1275972a-7048-4235-96b8-bd3cd173ed7d.jpg"
     },
     {
       "id": "35",
       "name": "NARGİLE | HOOKAH",
       "nameAr": "الشيشة",
-      "nameEn": "HOOKAH",
+      "nameEn": "Hookah",
       "image": "https://qrapi.toyayazilim.com/images/8c55b890-ec71-4926-8d3a-77b021572ce3.jpg"
     },
     {
       "id": "16",
       "name": "SOĞUK KAHVELER | ICED COFFEES",
       "nameAr": "القهوة الباردة",
-      "nameEn": "ICED COFFEES",
+      "nameEn": "Iced Coffees",
       "image": "https://qrapi.toyayazilim.com/images/12b508f5-01fe-4cbb-a2b0-49909d0ddaca.jpg"
     },
     {
       "id": "19",
       "name": "KAHVELER | COFFEES",
       "nameAr": "القهوة",
-      "nameEn": "COFFEES",
+      "nameEn": "Coffees",
       "image": "https://qrapi.toyayazilim.com/images/e9c77570-71bf-4a9d-99d7-fe724253d746.jpg"
     },
     {
       "id": "20",
       "name": "İÇECEKLER | DRİNKS",
-      "nameAr": "DRİNKS",
-      "nameEn": "DRİNKS",
+      "nameAr": "المشروبات",
+      "nameEn": "Drinks",
       "image": ""
     },
     {
       "id": "21",
       "name": "ÇAYLAR / TEAS",
-      "nameAr": "ÇAYLAR / TEAS",
-      "nameEn": "ÇAYLAR / TEAS",
+      "nameAr": "الشاي",
+      "nameEn": "Teas",
       "image": ""
     },
     {
       "id": "22",
       "name": "YEŞİL ÇAYLAR | GREEN TEAS",
       "nameAr": "الشاي الأخضر",
-      "nameEn": "GREEN TEAS",
+      "nameEn": "Green Teas",
       "image": "https://qrapi.toyayazilim.com/images/40eb5cff-d7a6-4bbc-9c4e-ca5afac78658.jpg"
     }
   ],
