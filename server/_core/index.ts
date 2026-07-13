@@ -8,6 +8,7 @@ import { registerStorageProxy } from "./storageProxy";
 import { appRouter } from "../routers";
 import { createContext } from "./context";
 import { serveStatic, setupVite } from "./vite";
+import { ensureUploadsDirectory, UPLOADS_DIR } from "../image-upload";
 
 function isPortAvailable(port: number): Promise<boolean> {
   return new Promise(resolve => {
@@ -34,6 +35,22 @@ async function startServer() {
   // Configure body parser with larger size limit for file uploads
   app.use(express.json({ limit: "50mb" }));
   app.use(express.urlencoded({ limit: "50mb", extended: true }));
+
+  ensureUploadsDirectory();
+  app.use(
+    "/uploads",
+    express.static(UPLOADS_DIR, {
+      dotfiles: "deny",
+      fallthrough: false,
+      immutable: true,
+      index: false,
+      maxAge: "30d",
+      setHeaders: res => {
+        res.setHeader("X-Content-Type-Options", "nosniff");
+      },
+    })
+  );
+
   registerStorageProxy(app);
   registerOAuthRoutes(app);
   // tRPC API

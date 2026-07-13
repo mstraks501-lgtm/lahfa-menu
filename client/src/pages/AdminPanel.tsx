@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useId, useState } from 'react';
 import { trpc } from '@/lib/trpc';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card } from '@/components/ui/card';
-import { Trash2, Edit2, Plus, Save, X, LogOut, Search, FolderPlus } from 'lucide-react';
+import { Trash2, Edit2, Plus, Save, X, LogOut, Search, FolderPlus, ImagePlus, Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
 
 interface MenuItem {
@@ -27,6 +27,126 @@ interface Category {
   image: string;
 }
 
+interface ImagePickerProps {
+  value: string;
+  onChange: (imageUrl: string) => void;
+  onUploadingChange?: (isUploading: boolean) => void;
+  className?: string;
+}
+
+const MAX_IMAGE_SIZE_BYTES = 15 * 1024 * 1024;
+const ACCEPTED_IMAGE_TYPES = ['image/jpeg', 'image/png', 'image/webp'];
+
+function readFileAsDataUrl(file: File): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      if (typeof reader.result === 'string') {
+        resolve(reader.result);
+      } else {
+        reject(new Error('تعذر قراءة الصورة'));
+      }
+    };
+    reader.onerror = () => reject(new Error('تعذر قراءة الصورة'));
+    reader.readAsDataURL(file);
+  });
+}
+
+function ImagePicker({ value, onChange, onUploadingChange, className = '' }: ImagePickerProps) {
+  const inputId = useId();
+  const [isUploading, setIsUploading] = useState(false);
+  const [previewFailed, setPreviewFailed] = useState(false);
+  const uploadImageMutation = trpc.menu.uploadImage.useMutation();
+
+  useEffect(() => {
+    setPreviewFailed(false);
+  }, [value]);
+
+  const handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const input = event.currentTarget;
+    const file = input.files?.[0];
+
+    if (!file) return;
+
+    if (!ACCEPTED_IMAGE_TYPES.includes(file.type)) {
+      toast.error('اختر صورة بصيغة JPG أو PNG أو WEBP');
+      input.value = '';
+      return;
+    }
+
+    if (file.size > MAX_IMAGE_SIZE_BYTES) {
+      toast.error('حجم الصورة يجب ألا يتجاوز 15 ميجابايت');
+      input.value = '';
+      return;
+    }
+
+    setIsUploading(true);
+    onUploadingChange?.(true);
+    try {
+      const dataUrl = await readFileAsDataUrl(file);
+      const result = await uploadImageMutation.mutateAsync({ dataUrl });
+      onChange(result.url);
+      toast.success('تم رفع الصورة بنجاح');
+    } catch (error) {
+      const message = error instanceof Error ? error.message : 'تعذر رفع الصورة';
+      toast.error(`خطأ: ${message}`);
+    } finally {
+      setIsUploading(false);
+      onUploadingChange?.(false);
+      input.value = '';
+    }
+  };
+
+  return (
+    <div className={`space-y-2 ${className}`}>
+      {value && !previewFailed && (
+        <img
+          src={value}
+          alt="معاينة الصورة"
+          className="h-32 w-full rounded-md border border-[#D4A574]/30 object-cover"
+          onError={() => setPreviewFailed(true)}
+        />
+      )}
+      {value && previewFailed && (
+        <p className="rounded-md border border-red-500/30 bg-red-500/10 p-3 text-center text-xs text-red-300">
+          تعذر عرض معاينة الصورة الحالية
+        </p>
+      )}
+      <div className="flex flex-wrap gap-2">
+        <label
+          htmlFor={inputId}
+          aria-disabled={isUploading}
+          className={`inline-flex min-h-10 cursor-pointer items-center justify-center rounded-md bg-[#D4A574] px-4 py-2 text-sm font-semibold text-black transition-colors hover:bg-[#C17A5C] ${isUploading ? 'pointer-events-none opacity-60' : ''}`}
+        >
+          {isUploading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <ImagePlus className="mr-2 h-4 w-4" />}
+          {isUploading ? 'جاري رفع الصورة...' : 'اختر صورة'}
+        </label>
+        <input
+          id={inputId}
+          type="file"
+          accept="image/jpeg,image/png,image/webp"
+          onChange={handleFileChange}
+          disabled={isUploading}
+          className="sr-only"
+        />
+        {value && (
+          <Button
+            type="button"
+            variant="outline"
+            onClick={() => onChange('')}
+            disabled={isUploading}
+            className="min-h-10 border-red-500/40 text-red-300 hover:bg-red-500/10 hover:text-red-200"
+          >
+            <X className="mr-2 h-4 w-4" />
+            إزالة الصورة
+          </Button>
+        )}
+      </div>
+      <p className="text-xs text-muted-foreground">JPG أو PNG أو WEBP — الحد الأقصى 15 ميجابايت</p>
+    </div>
+  );
+}
+
 export default function AdminPanel() {
   const [password, setPassword] = useState('');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -35,6 +155,7 @@ export default function AdminPanel() {
   const [editingItem, setEditingItem] = useState<MenuItem | null>(null);
   const [editingCategory, setEditingCategory] = useState<Category | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [isUploadingImage, setIsUploadingImage] = useState(false);
   const [activeTab, setActiveTab] = useState<'items' | 'categories'>('items');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategoryFilter, setSelectedCategoryFilter] = useState<string>('all');
@@ -439,11 +560,10 @@ export default function AdminPanel() {
                     placeholder="السعر (₺)"
                     className="bg-[#0F0F0F] border-[#D4A574]/30"
                   />
-                  <Input
+                  <ImagePicker
                     value={newItem.image}
-                    onChange={(e) => setNewItem({ ...newItem, image: e.target.value })}
-                    placeholder="رابط الصورة (اختياري)"
-                    className="bg-[#0F0F0F] border-[#D4A574]/30"
+                    onChange={(image) => setNewItem({ ...newItem, image })}
+                    onUploadingChange={setIsUploadingImage}
                   />
                   <Input
                     value={newItem.descriptionAr}
@@ -455,7 +575,7 @@ export default function AdminPanel() {
                 <div className="flex gap-2 mt-4">
                   <Button
                     onClick={handleAddItem}
-                    disabled={isLoading}
+                    disabled={isLoading || isUploadingImage}
                     className="bg-green-600 hover:bg-green-700 text-white font-semibold"
                   >
                     <Save className="w-4 h-4 mr-2" />
@@ -521,11 +641,10 @@ export default function AdminPanel() {
                           className="w-full text-sm p-2 bg-[#0F0F0F] border border-[#D4A574]/30 rounded text-foreground resize-none"
                           rows={2}
                         />
-                        <Input
+                        <ImagePicker
                           value={editingItem.image || ''}
-                          onChange={(e) => setEditingItem({ ...editingItem, image: e.target.value })}
-                          placeholder="رابط الصورة"
-                          className="text-sm bg-[#0F0F0F] border-[#D4A574]/30"
+                          onChange={(image) => setEditingItem({ ...editingItem, image })}
+                          onUploadingChange={setIsUploadingImage}
                         />
                         <select
                           value={editingItem.categoryId}
@@ -540,7 +659,7 @@ export default function AdminPanel() {
                           <Button
                             size="sm"
                             onClick={() => handleSaveItem(editingItem)}
-                            disabled={isLoading}
+                            disabled={isLoading || isUploadingImage}
                             className="flex-1 bg-green-600 hover:bg-green-700"
                           >
                             <Save className="w-4 h-4 mr-1" />
@@ -595,7 +714,7 @@ export default function AdminPanel() {
                             size="sm"
                             variant="destructive"
                             onClick={() => handleDeleteItem(item.id)}
-                            disabled={isLoading}
+                            disabled={isLoading || isUploadingImage}
                             className="flex-1 text-xs"
                           >
                             <Trash2 className="w-3 h-3 mr-1" />
@@ -645,17 +764,16 @@ export default function AdminPanel() {
                     placeholder="الاسم بالإنجليزية"
                     className="bg-[#0F0F0F] border-[#D4A574]/30"
                   />
-                  <Input
+                  <ImagePicker
                     value={newCategory.image}
-                    onChange={(e) => setNewCategory({ ...newCategory, image: e.target.value })}
-                    placeholder="رابط الصورة (اختياري)"
-                    className="bg-[#0F0F0F] border-[#D4A574]/30"
+                    onChange={(image) => setNewCategory({ ...newCategory, image })}
+                    onUploadingChange={setIsUploadingImage}
                   />
                 </div>
                 <div className="flex gap-2 mt-4">
                   <Button
                     onClick={handleAddCategory}
-                    disabled={isLoading}
+                    disabled={isLoading || isUploadingImage}
                     className="bg-green-600 hover:bg-green-700 text-white font-semibold"
                   >
                     <Save className="w-4 h-4 mr-2" />
@@ -701,17 +819,16 @@ export default function AdminPanel() {
                         placeholder="الاسم بالإنجليزية"
                         className="text-sm bg-[#0F0F0F] border-[#D4A574]/30"
                       />
-                      <Input
+                      <ImagePicker
                         value={editingCategory.image || ''}
-                        onChange={(e) => setEditingCategory({ ...editingCategory, image: e.target.value })}
-                        placeholder="رابط الصورة"
-                        className="text-sm bg-[#0F0F0F] border-[#D4A574]/30"
+                        onChange={(image) => setEditingCategory({ ...editingCategory, image })}
+                        onUploadingChange={setIsUploadingImage}
                       />
                       <div className="flex gap-2">
                         <Button
                           size="sm"
                           onClick={() => handleSaveCategory(editingCategory)}
-                          disabled={isLoading}
+                          disabled={isLoading || isUploadingImage}
                           className="flex-1 bg-green-600 hover:bg-green-700"
                         >
                           <Save className="w-4 h-4 mr-1" />
@@ -758,7 +875,7 @@ export default function AdminPanel() {
                           size="sm"
                           variant="destructive"
                           onClick={() => handleDeleteCategory(category.id)}
-                          disabled={isLoading}
+                          disabled={isLoading || isUploadingImage}
                           className="flex-1 text-xs"
                         >
                           <Trash2 className="w-3 h-3 mr-1" />
