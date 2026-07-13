@@ -2,6 +2,8 @@ import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
+import { z } from "zod";
+import * as menuStorage from "./menu-storage";
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -17,12 +19,56 @@ export const appRouter = router({
     }),
   }),
 
-  // TODO: add feature routers here, e.g.
-  // todo: router({
-  //   list: protectedProcedure.query(({ ctx }) =>
-  //     db.getUserTodos(ctx.user.id)
-  //   ),
-  // }),
+  // Menu API endpoints
+  menu: router({
+    // Get all categories
+    getCategories: publicProcedure.query(() => {
+      return menuStorage.getCategories();
+    }),
+
+    // Get all items
+    getItems: publicProcedure.query(() => {
+      return menuStorage.getItems();
+    }),
+
+    // Get items by category
+    getItemsByCategory: publicProcedure
+      .input(z.object({ categoryId: z.string() }))
+      .query(({ input }) => {
+        return menuStorage.getItemsByCategory(input.categoryId);
+      }),
+
+    // Update item (admin)
+    updateItem: publicProcedure
+      .input(z.object({
+        id: z.string(),
+        categoryId: z.string(),
+        name: z.string(),
+        nameAr: z.string(),
+        nameEn: z.string(),
+        price: z.number(),
+        description: z.string().optional(),
+        descriptionAr: z.string().optional(),
+        descriptionEn: z.string().optional(),
+        image: z.string().optional(),
+      }))
+      .mutation(({ input }) => {
+        return menuStorage.upsertItem(input);
+      }),
+
+    // Delete item (admin)
+    deleteItem: publicProcedure
+      .input(z.object({ id: z.string() }))
+      .mutation(({ input }) => {
+        const success = menuStorage.deleteItem(input.id);
+        return { success };
+      }),
+
+    // Get all menu data
+    getAllData: publicProcedure.query(() => {
+      return menuStorage.readMenuData();
+    }),
+  })
 });
 
 export type AppRouter = typeof appRouter;
