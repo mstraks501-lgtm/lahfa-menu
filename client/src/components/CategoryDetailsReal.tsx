@@ -1,9 +1,9 @@
-import { useMenuStorage } from '@/hooks/useMenuStorage';
+import { useMenuStorage, type Product } from '@/hooks/useMenuStorage';
 import { Card } from '@/components/ui/card';
 
 interface CategoryDetailsRealProps {
   categoryId: string;
-  language: 'ar' | 'en';
+  language: 'ar' | 'en' | 'tr';
 }
 
 export function CategoryDetailsReal({ categoryId, language }: CategoryDetailsRealProps) {
@@ -20,14 +20,20 @@ export function CategoryDetailsReal({ categoryId, language }: CategoryDetailsRea
     return null;
   }
 
-  const categoryName = language === 'ar' ? category.name_ar : category.name_en;
+  const categoryName = language === 'tr'
+    ? category.name_tr || ''
+    : language === 'ar'
+      ? category.name_ar || category.name_tr || ''
+      : category.name_en || category.name_tr || '';
 
-  const getProductName = (product: any): string => {
-    if (language === 'ar') return product.name_ar || product.name || '';
-    return product.name_en || product.name || '';
+  const getProductName = (product: Product): string => {
+    if (language === 'tr') return product.name_tr || product.name || '';
+    if (language === 'ar') return product.name_ar || product.name_tr || product.name || '';
+    return product.name_en || product.name_tr || product.name || '';
   };
 
-  const getProductDescription = (product: any): string | null => {
+  const getProductDescription = (product: Product): string | null => {
+    if (language === 'tr') return product.description || null;
     if (language === 'ar') return product.description_ar || product.description || null;
     return product.description_en || product.description || null;
   };

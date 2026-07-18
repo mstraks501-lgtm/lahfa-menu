@@ -2,7 +2,7 @@ import { useMenuStorage } from '@/hooks/useMenuStorage';
 import { Card } from '@/components/ui/card';
 
 interface CategoriesGridRealProps {
-  language: 'ar' | 'en';
+  language: 'ar' | 'en' | 'tr';
   onSelectCategory: (categoryId: string) => void;
 }
 
@@ -16,6 +16,8 @@ export function CategoriesGridReal({ language, onSelectCategory }: CategoriesGri
   const getCategoryName = (categoryId: string): string => {
     const category = data.categories.find((c) => c.id === categoryId);
     if (!category) return '';
+
+    if (language === 'tr') return category.name_tr || '';
     if (language === 'ar') return category.name_ar || category.name_tr || '';
     return category.name_en || category.name_tr || '';
   };

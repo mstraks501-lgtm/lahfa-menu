@@ -110,10 +110,11 @@ export function useMenuStorage() {
   }, [allData.isError]);
 
   // Dummy functions for backward compatibility
+  type ProductDraft = Pick<Product, 'name' | 'description' | 'price' | 'image'>;
   const saveData = (newData: MenuData) => { setData(newData); };
-  const addProduct = () => {};
-  const updateProduct = () => {};
-  const deleteProduct = () => {};
+  const addProduct = (_categoryId: string, _product: ProductDraft) => {};
+  const updateProduct = (_categoryId: string, _productId: number, _product: ProductDraft) => {};
+  const deleteProduct = (_categoryId: string, _productId: number) => {};
   const updateCategory = () => {};
   const resetData = () => { allData.refetch(); };
 

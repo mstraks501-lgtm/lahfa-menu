@@ -33,17 +33,17 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <HeaderNew
-        currentLanguage={language as 'ar' | 'en' | 'tr'}
-        onLanguageChange={(lang) => switchLanguage(lang as 'ar' | 'en' | 'tr')}
+        currentLanguage={language}
+        onLanguageChange={switchLanguage}
         onBack={handleBack}
         showBack={selectedCategory !== null}
       />
 
       <main className="flex-1">
         {selectedCategory ? (
-          <CategoryDetailsReal categoryId={selectedCategory} language={language as 'ar' | 'en'} />
+          <CategoryDetailsReal categoryId={selectedCategory} language={language} />
         ) : (
-          <CategoriesGridReal language={language as 'ar' | 'en'} onSelectCategory={setSelectedCategory} />
+          <CategoriesGridReal language={language} onSelectCategory={setSelectedCategory} />
         )}
       </main>
     </div>

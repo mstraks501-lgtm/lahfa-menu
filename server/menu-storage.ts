@@ -114,6 +114,32 @@ export function deleteItem(itemId: string): boolean {
   return false;
 }
 
+// Move an item up or down within its category
+export function reorderItem(itemId: string, direction: 'up' | 'down'): boolean {
+  const data = readMenuData();
+  const item = data.items.find(i => i.id === itemId);
+  if (!item) return false;
+
+  // Get indices of items in the same category
+  const categoryItems = data.items
+    .map((it, idx) => ({ item: it, globalIdx: idx }))
+    .filter(x => x.item.categoryId === item.categoryId);
+
+  const localIdx = categoryItems.findIndex(x => x.item.id === itemId);
+  if (localIdx < 0) return false;
+
+  const swapLocalIdx = direction === 'up' ? localIdx - 1 : localIdx + 1;
+  if (swapLocalIdx < 0 || swapLocalIdx >= categoryItems.length) return false;
+
+  // Swap in the global items array
+  const globalA = categoryItems[localIdx].globalIdx;
+  const globalB = categoryItems[swapLocalIdx].globalIdx;
+  [data.items[globalA], data.items[globalB]] = [data.items[globalB], data.items[globalA]];
+
+  writeMenuData(data);
+  return true;
+}
+
 // Add or update category
 export function upsertCategory(category: Category): Category {
   const data = readMenuData();

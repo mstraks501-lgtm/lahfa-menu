@@ -131,6 +131,13 @@ export const appRouter = router({
         return { success };
       }),
 
+    // Reorder item within its category (admin)
+    reorderItem: publicProcedure
+      .input(z.object({ id: z.string(), direction: z.enum(['up', 'down']) }))
+      .mutation(({ input }) => {
+        return menuStorage.reorderItem(input.id, input.direction);
+      }),
+
     // Update category (admin)
     updateCategory: publicProcedure
       .input(z.object({

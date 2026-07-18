@@ -220,6 +220,20 @@ export default function AdminPanel() {
     },
   });
 
+  const reorderItemMutation = trpc.menu.reorderItem.useMutation({
+    onSuccess: (reordered) => {
+      if (reordered) {
+        toast.success('تم تغيير ترتيب المنتج بنجاح');
+      } else {
+        toast.info('لا يمكن تحريك المنتج أكثر في هذا الاتجاه');
+      }
+      getItems.refetch();
+    },
+    onError: (error) => {
+      toast.error(`خطأ: ${error.message}`);
+    },
+  });
+
   const updateCategoryMutation = trpc.menu.updateCategory.useMutation({
     onSuccess: () => {
       toast.success('تم تحديث الفئة بنجاح');
@@ -328,6 +342,15 @@ export default function AdminPanel() {
       } finally {
         setIsLoading(false);
       }
+    }
+  };
+
+  const handleReorderItem = async (itemId: string, direction: 'up' | 'down') => {
+    setIsLoading(true);
+    try {
+      await reorderItemMutation.mutateAsync({ id: itemId, direction });
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -701,10 +724,37 @@ export default function AdminPanel() {
                           <p className="text-xs text-muted-foreground line-clamp-2">{item.descriptionAr}</p>
                         )}
                         <div className="flex gap-2 pt-2">
+                          <div className="flex gap-1">
+                            <Button
+                              type="button"
+                              size="sm"
+                              variant="outline"
+                              onClick={() => handleReorderItem(item.id, 'up')}
+                              disabled={isLoading || isUploadingImage}
+                              aria-label="تحريك المنتج للأعلى"
+                              title="تحريك للأعلى"
+                              className="border-[#D4A574]/30 px-3 text-[#D4A574]"
+                            >
+                              ▲
+                            </Button>
+                            <Button
+                              type="button"
+                              size="sm"
+                              variant="outline"
+                              onClick={() => handleReorderItem(item.id, 'down')}
+                              disabled={isLoading || isUploadingImage}
+                              aria-label="تحريك المنتج للأسفل"
+                              title="تحريك للأسفل"
+                              className="border-[#D4A574]/30 px-3 text-[#D4A574]"
+                            >
+                              ▼
+                            </Button>
+                          </div>
                           <Button
                             size="sm"
                             variant="outline"
                             onClick={() => setEditingItem(item)}
+                            disabled={isLoading || isUploadingImage}
                             className="flex-1 border-[#D4A574]/30 text-[#D4A574] text-xs"
                           >
                             <Edit2 className="w-3 h-3 mr-1" />
