@@ -1,5 +1,6 @@
 import { useMenuStorage } from '@/hooks/useMenuStorage';
 import { Card } from '@/components/ui/card';
+import { UtensilsCrossed } from 'lucide-react';
 
 interface CategoriesGridRealProps {
   language: 'ar' | 'en' | 'tr';
@@ -22,27 +23,33 @@ export function CategoriesGridReal({ language, onSelectCategory }: CategoriesGri
     return category.name_en || category.name_tr || '';
   };
 
-  // فلترة الفئات التي لديها صور فقط
-  const categoriesWithImages = data.categories.filter((cat) => cat.image);
+  // Show ALL categories (not just ones with images)
+  const allCategories = data.categories;
 
   return (
     <section className="py-6 md:py-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {categoriesWithImages.map((category) => (
+          {allCategories.map((category) => (
             <button
               key={category.id}
               onClick={() => onSelectCategory(category.id)}
               className="group relative overflow-hidden rounded-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background"
             >
               <Card className="relative h-40 md:h-48 overflow-hidden border-0 bg-card p-0 shadow-lg">
-                {/* Image */}
-                <img
-                  src={category.image}
-                  alt={getCategoryName(category.id)}
-                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
-                  loading="lazy"
-                />
+                {/* Image or Placeholder */}
+                {category.image ? (
+                  <img
+                    src={category.image}
+                    alt={getCategoryName(category.id)}
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-secondary to-card">
+                    <UtensilsCrossed className="h-12 w-12 text-muted-foreground/50 transition-transform duration-300 group-hover:scale-110" />
+                  </div>
+                )}
 
                 {/* Overlay Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
